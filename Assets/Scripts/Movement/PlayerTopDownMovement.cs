@@ -8,9 +8,18 @@ public class PlayerTopDownMovement : TopDownMovement {
 
     public enum PlayerState { Walking, Standing, Flinching, Attacking, }
     public PlayerState playerState;
+
+  
+    public GameObject cleaner;
+
+    public GameObject holding;
+    //public GameObject interactionZone;
+
+
     public GameObject currentGun;
     public GameObject[] gunsInInventory;
     
+
     public void Awake()
     {
         if (instance == null)
@@ -39,6 +48,7 @@ public class PlayerTopDownMovement : TopDownMovement {
     {
         HandleMovementInput();
         HandleShootingInput();
+        HandleCleanerInput();
     }
 
     public void HandleMovementInput()
@@ -76,4 +86,18 @@ public class PlayerTopDownMovement : TopDownMovement {
     {
         currentGun.GetComponent<BaseGunScript>().Shoot();
     }
+
+    public void HandleCleanerInput()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            Vector2 playerPos = new Vector2(this.transform.position.x, this.transform.position.y);
+            GameObject cleanerArea = Instantiate(cleaner, new Vector3(playerPos.x, playerPos.y, 0), Quaternion.identity);
+
+        }
+
+    }
+
+
+    
 }
