@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Needs top and bottom edge and resolution set.
+// Top bound is what is top of the screen (further away in normal isometric view).
+// Transforms for sprites need to be at their feet-ish. 
+
 public class ZSorterMaster : MonoBehaviour
 {
     public int maxSortOrders = 10;

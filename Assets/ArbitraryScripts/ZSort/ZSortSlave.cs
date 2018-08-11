@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Items that need sorted need to have a ZSortSlave script
+// If they're sprites they need to be on the same layer.
+
 public class ZSortSlave : MonoBehaviour
 {
     public float height = 0;
