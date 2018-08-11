@@ -10,6 +10,7 @@ public class EnemyTopDownMovement : TopDownMovement {
     private bool enemyCanMove = true;
 
     public float interactionRange = 1f;
+    public int hp = 100;
 
     public float InteractionRange
     {
@@ -40,13 +41,17 @@ public class EnemyTopDownMovement : TopDownMovement {
     // Update is called once per frame
     protected virtual void Update()
     {
+        if(this.hp <= 0)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
         if (enemyCanMove)
         {
             //Enemy should move
             curTime += Time.deltaTime;
             float playerDist = FindPlayerDistance();
-            Debug.Log("Player Distance: " + playerDist);
             if (animator.GetFloat("Speed") < 1)
             {
                 //If enemy is not moving
@@ -88,6 +93,17 @@ public class EnemyTopDownMovement : TopDownMovement {
             //Enemy should not be moving
             rb2D.velocity = Vector2.zero;
         }
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        this.hp -= collision.gameObject.GetComponent<BulletScript>().bulletDamage;
+        Destroy(collision.gameObject);
+    }
+
+    public void OnDestroy()
+    {
+        EventManager.TriggerEvent("ENEMY_DIED");
     }
 
     public Vector3 FindPlayer()

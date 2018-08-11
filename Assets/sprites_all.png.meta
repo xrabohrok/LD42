@@ -121,7 +121,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b3dc075df9178224fb5598090fe3fb0c
+      spriteID: 5994e36bdbcb6e443baa57405006950a
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c7c2a5a29f28e5843a8dfb806f6b5520
+      spriteID: 25d42783c327236418e0197451720f03
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shooter-bullets-crossb_1
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 3007
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90430303bc379b24eb7bec65157ef6de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shooter-bullets-crossb_2
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 3007
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 913cea4d64b21954387c1d33f64a4946
       vertices: []
       indices: 
       edges: []
@@ -150,7 +190,7 @@ TextureImporter:
       name: shooter-bullets-moonb_1
       rect:
         serializedVersion: 2
-        x: 1082
+        x: 1098
         y: 2998
         width: 16
         height: 16
@@ -161,7 +201,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 745d6e284760bec4d9e0ada1dc0e7cfc
+      spriteID: 503cf7a4b25a488439bfacc8113c42c8
       vertices: []
       indices: 
       edges: []
@@ -170,7 +210,7 @@ TextureImporter:
       name: shooter-bullets-moonb_2
       rect:
         serializedVersion: 2
-        x: 1099
+        x: 1115
         y: 2998
         width: 16
         height: 16
@@ -181,7 +221,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2b83beeab42474d408b6b4e380c90849
+      spriteID: bff75980f1d50be4bb185aa7c89c7acf
       vertices: []
       indices: 
       edges: []
@@ -190,7 +230,7 @@ TextureImporter:
       name: shooter-bullets-moonb_3
       rect:
         serializedVersion: 2
-        x: 1116
+        x: 1132
         y: 2998
         width: 16
         height: 16
@@ -201,7 +241,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 37238b14eb228a94b8ec40f14b954077
+      spriteID: da1e3e1c68f25334eab058dbaa1f996c
       vertices: []
       indices: 
       edges: []
@@ -210,7 +250,7 @@ TextureImporter:
       name: shooter-bullets-spirb_1
       rect:
         serializedVersion: 2
-        x: 1133
+        x: 1149
         y: 3006
         width: 8
         height: 8
@@ -221,7 +261,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3e0393907d8a7ed49b3f8259544d5022
+      spriteID: 813c240a36276ba4195ea049585bd4cd
       vertices: []
       indices: 
       edges: []
@@ -230,7 +270,7 @@ TextureImporter:
       name: shooter-bullets-spirb_2
       rect:
         serializedVersion: 2
-        x: 1142
+        x: 1158
         y: 3006
         width: 8
         height: 8
@@ -241,7 +281,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3f4c19ec5e7ca194189512a7a05ab420
+      spriteID: 97c63170aa2339d43b054582cc8df769
       vertices: []
       indices: 
       edges: []
@@ -250,7 +290,7 @@ TextureImporter:
       name: shooter-bullets-starb_1
       rect:
         serializedVersion: 2
-        x: 1151
+        x: 1167
         y: 2998
         width: 16
         height: 16
@@ -261,7 +301,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: acb9a0b0d8ca3ac4c824a6c012319e9f
+      spriteID: efe98f036a291fd4baf15b69c968c132
       vertices: []
       indices: 
       edges: []
@@ -270,7 +310,7 @@ TextureImporter:
       name: shooter-bullets-starb_2
       rect:
         serializedVersion: 2
-        x: 1168
+        x: 1184
         y: 2998
         width: 16
         height: 16
@@ -281,7 +321,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2b608034ab03e3f4da5b452515dc2a6d
+      spriteID: 0f5ce613094c3a449a407e45744bef43
       vertices: []
       indices: 
       edges: []
@@ -290,7 +330,7 @@ TextureImporter:
       name: shooter-chassis-idle1
       rect:
         serializedVersion: 2
-        x: 1185
+        x: 1201
         y: 2950
         width: 64
         height: 64
@@ -301,7 +341,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6c159b16091e23e4dae8f58b2e02382e
+      spriteID: 14fe9fe0f5cae9d45a96f3dbdaa7fe74
       vertices: []
       indices: 
       edges: []
@@ -310,7 +350,7 @@ TextureImporter:
       name: shooter-chassis-idle2
       rect:
         serializedVersion: 2
-        x: 1250
+        x: 1266
         y: 2950
         width: 64
         height: 64
@@ -321,7 +361,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dde30d8851f005745bb0e1c5e3a4a483
+      spriteID: ba5141fcbabe0b548a2b92a68ed91915
       vertices: []
       indices: 
       edges: []
@@ -330,7 +370,7 @@ TextureImporter:
       name: shooter-chassis-startCleaning1
       rect:
         serializedVersion: 2
-        x: 1315
+        x: 1331
         y: 2950
         width: 64
         height: 64
@@ -341,7 +381,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 07ab7058d49e5c64d91ce1be265879c5
+      spriteID: ab7286996e961984d8c2c32f1e2cb100
       vertices: []
       indices: 
       edges: []
@@ -350,7 +390,7 @@ TextureImporter:
       name: shooter-chassis-startCleaning2
       rect:
         serializedVersion: 2
-        x: 1380
+        x: 1396
         y: 2950
         width: 64
         height: 64
@@ -361,7 +401,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0dc0665c44f2d2040b436cabb40c679f
+      spriteID: 99e9ba9e0b6e466489275155a4199df4
       vertices: []
       indices: 
       edges: []
@@ -370,7 +410,7 @@ TextureImporter:
       name: shooter-chassis-startCleaning3
       rect:
         serializedVersion: 2
-        x: 1445
+        x: 1461
         y: 2950
         width: 64
         height: 64
@@ -381,7 +421,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 27659377b6dbee84a90216fa69cee985
+      spriteID: 09bcf4dac61c4264faf2ab4ee828b653
       vertices: []
       indices: 
       edges: []
@@ -390,7 +430,7 @@ TextureImporter:
       name: shooter-chassis-walk1
       rect:
         serializedVersion: 2
-        x: 1510
+        x: 1526
         y: 2950
         width: 64
         height: 64
@@ -401,7 +441,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 27e95dc45d3ed6948828727171d74c8e
+      spriteID: 3887e8236a84bcf448c82f753ef543b4
       vertices: []
       indices: 
       edges: []
@@ -410,7 +450,7 @@ TextureImporter:
       name: shooter-chassis-walk2
       rect:
         serializedVersion: 2
-        x: 1575
+        x: 1591
         y: 2950
         width: 64
         height: 64
@@ -421,7 +461,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c2a07ee6ecdc7684bba27adf85d3d537
+      spriteID: 6ba5261c2dd01e94d8330acf0dabbd75
       vertices: []
       indices: 
       edges: []
@@ -430,7 +470,7 @@ TextureImporter:
       name: shooter-chassis-walk3
       rect:
         serializedVersion: 2
-        x: 1510
+        x: 1526
         y: 2950
         width: 64
         height: 64
@@ -441,7 +481,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 421463e325c91de4e9d8ae2edd2060d4
+      spriteID: fb2ae50faede90a429d6e9dc6ec10294
       vertices: []
       indices: 
       edges: []
@@ -450,7 +490,7 @@ TextureImporter:
       name: shooter-chassis-walk4
       rect:
         serializedVersion: 2
-        x: 1575
+        x: 1591
         y: 2950
         width: 64
         height: 64
@@ -461,7 +501,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a36112d400ba4d74f8cd89a2a1e85bd9
+      spriteID: 3cac615d82e36d54f89775a1e0ef6533
       vertices: []
       indices: 
       edges: []
@@ -470,7 +510,7 @@ TextureImporter:
       name: shooter-chassis-walk5
       rect:
         serializedVersion: 2
-        x: 1510
+        x: 1526
         y: 2950
         width: 64
         height: 64
@@ -481,7 +521,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 89b10b0b7cbc1364cb86bc88cfa357ab
+      spriteID: 44262accd661cd04ea795e16dda4e0d6
       vertices: []
       indices: 
       edges: []
@@ -490,7 +530,7 @@ TextureImporter:
       name: shooter-chassis-walk6
       rect:
         serializedVersion: 2
-        x: 1575
+        x: 1591
         y: 2950
         width: 64
         height: 64
@@ -501,7 +541,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 21d97e034a72f124e8195caefb8a5794
+      spriteID: 935f1269a407b3c4bb665e5305f463b4
       vertices: []
       indices: 
       edges: []
