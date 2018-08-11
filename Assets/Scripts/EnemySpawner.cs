@@ -7,8 +7,12 @@ public class EnemySpawner : MonoBehaviour {
     public GameObject enemyPrefab;
     private GameObject player;
 
-    public Vector2 size;
+	public float mapRadius = 3;
+	public int spawnDistance = 3;
     private Vector2 center;
+	private Vector2 pos;
+	
+	
 
 	// Use this for initialization
 	void Start () {
@@ -19,16 +23,21 @@ public class EnemySpawner : MonoBehaviour {
 	
     public void SpawnNewEnemy()
     {
-        Vector2 playerPos = player.transform.position;
-        Vector2 position = playerPos;
-        while(Vector2.Distance(position, playerPos) < 4)
-        {
-            // Once the map is drawn and there's a collider for the outside of it, try and use that instead. -mw
-            // Also maybe an escape clause just so this doesn't accidentally turn infinite. -mw
-            position = Random.insideUnitCircle * 4;
-        }
-
-        Vector2 pos = center + new Vector2(Random.Range(-5.05f, 5.05f), Random.Range(-3.5f, 4.3f));
+	    Vector2 playerPos = player.transform.position;
+	    pos = RandomCircle(center, mapRadius);
+	    while (Vector2.Distance(pos, playerPos) < spawnDistance)
+	    {
+		    pos = RandomCircle(center, mapRadius);
+	    }
+       
         Instantiate(enemyPrefab, pos, Quaternion.identity);
     }
+	
+	private Vector2 RandomCircle ( Vector2 centerCircle ,   float radius  ){
+		float ang = Random.value * 360;
+		Vector2 position;
+		position.x = centerCircle.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
+		position.y = centerCircle.y + radius * Mathf.Cos(ang * Mathf.Deg2Rad);
+		return position;
+	}
 }
