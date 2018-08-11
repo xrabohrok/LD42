@@ -4,7 +4,7 @@
 # To import these sprites into your Unity project, download "TexturePackerImporter":
 # https://www.codeandweb.com/texturepacker/unity
 #
-# $TexturePacker:SmartUpdate:7a285d2e76b97845b220d88a9d9b3324:7b5412107ba6cb3057973ee887129df2:f683c4e9aa78f29e0ed6c6b94537e31d$
+# $TexturePacker:SmartUpdate:e2b5d29b961c061883c7a701da0c89bd:2b3e977c65c1ea40fa8dd575cbc053f5:f683c4e9aa78f29e0ed6c6b94537e31d$
 #
 :format=40300
 :texture=sprites_all.png
@@ -14,16 +14,21 @@
 
 map/goo;1;3015;1080;1080; 0.5;0.5; 0;0;0;0
 map/no goo;1;1934;1080;1080; 0.5;0.5; 0;0;0;0
-shooter/bullets/starb_1;1082;2998;16;16; 0.5;0.5; 0;0;0;0
-shooter/bullets/starb_2;1099;2998;16;16; 0.5;0.5; 0;0;0;0
-shooter/chassis/idle1;1116;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/idle2;1181;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/startCleaning1;1246;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/startCleaning2;1311;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/startCleaning3;1376;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk1;1441;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk2;1506;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk3;1441;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk4;1506;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk5;1441;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk6;1506;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/bullets/moonb_1;1082;2998;16;16; 0.5;0.5; 0;0;0;0
+shooter/bullets/moonb_2;1099;2998;16;16; 0.5;0.5; 0;0;0;0
+shooter/bullets/moonb_3;1116;2998;16;16; 0.5;0.5; 0;0;0;0
+shooter/bullets/spirb_1;1133;3006;8;8; 0.5;0.5; 0;0;0;0
+shooter/bullets/spirb_2;1142;3006;8;8; 0.5;0.5; 0;0;0;0
+shooter/bullets/starb_1;1151;2998;16;16; 0.5;0.5; 0;0;0;0
+shooter/bullets/starb_2;1168;2998;16;16; 0.5;0.5; 0;0;0;0
+shooter/chassis/idle1;1185;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/idle2;1250;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/startCleaning1;1315;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/startCleaning2;1380;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/startCleaning3;1445;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk1;1510;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk2;1575;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk3;1510;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk4;1575;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk5;1510;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk6;1575;2950;64;64; 0.5;0.5; 0;0;0;0
