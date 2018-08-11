@@ -24,7 +24,7 @@ public class SniperGunScript : BaseGunScript {
             filter.SetLayerMask(1 << LayerMask.NameToLayer("Character"));
             RaycastHit2D[] results = new RaycastHit2D[10];
 
-            int length = Physics2D.Linecast(gunPos, endPos, filter, results);
+            Physics2D.Linecast(gunPos, endPos, filter, results);
 
             foreach(RaycastHit2D hit in results)
             {
