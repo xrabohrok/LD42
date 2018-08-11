@@ -101,6 +101,11 @@ public class EnemyTopDownMovement : TopDownMovement {
         Destroy(collision.gameObject);
     }
 
+    public void OnDestroy()
+    {
+        EventManager.TriggerEvent("ENEMY_DIED");
+    }
+
     public Vector3 FindPlayer()
     {
         Vector3 heading = player.transform.position - transform.position;
