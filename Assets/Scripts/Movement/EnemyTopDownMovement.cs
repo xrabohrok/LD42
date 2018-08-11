@@ -103,9 +103,14 @@ public class EnemyTopDownMovement : TopDownMovement {
     {
         if (collision.tag == "Bullet")
         {
-            this.hp -= collision.gameObject.GetComponent<BulletScript>().bulletDamage;
+            TakeDamage(collision.gameObject.GetComponent<BulletScript>().bulletDamage);
             Destroy(collision.gameObject);
         }
+    }
+
+    public void TakeDamage(int amount)
+    {
+        this.hp -= amount;
     }
 
     public void Death()

@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class SniperGunScript : BaseGunScript {
 
-    public new int bulletDamage = 30;
-    
-    public new void Shoot()
+    private void Start()
+    {
+        bulletDamage = 30;
+        base.Start();
+    }
+
+    public override void Shoot()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -15,11 +19,20 @@ public class SniperGunScript : BaseGunScript {
             Vector2 direction = new Vector2(worldPoint.x, worldPoint.y) - gunPos;
             direction.Normalize();
             Vector2 endPos = (direction * 10) + gunPos;
+
+            ContactFilter2D filter = new ContactFilter2D();
+            filter.SetLayerMask(1 << LayerMask.NameToLayer("Character"));
             RaycastHit2D[] results = new RaycastHit2D[10];
 
-            //int length = Physics2D.Linecast(gunPos, endPos, )
-            // public static RaycastHit2D Linecast(Vector2 start, Vector2 end, int layerMask = DefaultRaycastLayers, float minDepth = -Mathf.Infinity, float maxDepth = Mathf.Infinity); 
-            // ublic static int Linecast(Vector2 start, Vector2 end, ContactFilter2D contactFilter, RaycastHit2D[] results); 
+            int length = Physics2D.Linecast(gunPos, endPos, filter, results);
+
+            foreach(RaycastHit2D hit in results)
+            {
+                if(hit.collider && hit.collider.tag == "Enemy")
+                {
+                    hit.transform.gameObject.GetComponent<EnemyTopDownMovement>().TakeDamage(bulletDamage);
+                }
+            }
         }
     }
 }

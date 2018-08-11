@@ -10,7 +10,7 @@ public class BaseGunScript : MonoBehaviour {
     public float bulletSpeed;
 
 	// Use this for initialization
-	void Start () {
+	public void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
     }
 	
