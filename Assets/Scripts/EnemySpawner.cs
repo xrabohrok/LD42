@@ -7,10 +7,14 @@ public class EnemySpawner : MonoBehaviour {
     public GameObject enemyPrefab;
     private GameObject player;
 
+    public Vector2 size;
+    private Vector2 center;
+
 	// Use this for initialization
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
         EventManager.StartListening("ENEMY_DIED", SpawnNewEnemy);
+	    center = new Vector2(0, 0);
 	}
 	
     public void SpawnNewEnemy()
@@ -23,6 +27,8 @@ public class EnemySpawner : MonoBehaviour {
             // Also maybe an escape clause just so this doesn't accidentally turn infinite. -mw
             position = Random.insideUnitCircle * 4;
         }
-        Instantiate(enemyPrefab, new Vector3(position.x, position.y, 0), Quaternion.identity);
+
+        Vector2 pos = center + new Vector2(Random.Range(-5.05f, 5.05f), Random.Range(-3.5f, 4.3f));
+        Instantiate(enemyPrefab, pos, Quaternion.identity);
     }
 }
