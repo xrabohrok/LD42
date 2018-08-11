@@ -11,6 +11,9 @@ public class EnemyTopDownMovement : TopDownMovement {
 
     public float interactionRange = 1f;
     public int hp = 100;
+    
+    
+    public GameObject gooPrefab;
 
     public float InteractionRange
     {
@@ -43,7 +46,8 @@ public class EnemyTopDownMovement : TopDownMovement {
     {
         if(this.hp <= 0)
         {
-            Destroy(gameObject);
+            Death();
+            
             return;
         }
 
@@ -101,9 +105,15 @@ public class EnemyTopDownMovement : TopDownMovement {
         Destroy(collision.gameObject);
     }
 
+    public void Death()
+    {
+        Instantiate(gooPrefab, new Vector3(this.transform.position.x, this.transform.position.y, 0), Quaternion.identity);
+        EventManager.TriggerEvent("ENEMY_DIED");
+        Destroy(gameObject);
+    }
     public void OnDestroy()
     {
-        EventManager.TriggerEvent("ENEMY_DIED");
+        
     }
 
     public Vector3 FindPlayer()
