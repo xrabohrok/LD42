@@ -4,7 +4,7 @@
 # To import these sprites into your Unity project, download "TexturePackerImporter":
 # https://www.codeandweb.com/texturepacker/unity
 #
-# $TexturePacker:SmartUpdate:4d0984548d2137f6ba420183cc9b732a:e7a1d10f1204cea41b9cb58134316bc2:f683c4e9aa78f29e0ed6c6b94537e31d$
+# $TexturePacker:SmartUpdate:d599b5b3ecc7c810c5f6d7b12ac72336:b42f050750760e278a0a18e8a8b7b87b:f683c4e9aa78f29e0ed6c6b94537e31d$
 #
 :format=40300
 :texture=sprites_all.png
@@ -32,10 +32,14 @@ enemy/slug/downAngle_run1;805;4047;48;48; 0.5;0.5; 0;0;0;0
 enemy/slug/downAngle_run2;854;4047;48;48; 0.5;0.5; 0;0;0;0
 enemy/slug/side_run1;903;4047;48;48; 0.5;0.5; 0;0;0;0
 enemy/slug/side_run2;952;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/up_run1;1001;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/up_run2;1050;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/upAngle_run1;1099;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/upAngle_run2;1148;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/spawn1;1001;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/spawn2;1050;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/spawn3;1099;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/spawn4;1148;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/up_run1;1197;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/up_run2;1246;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/upAngle_run1;1295;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/upAngle_run2;1344;4047;48;48; 0.5;0.5; 0;0;0;0
 map/arena;1;2964;1080;1080; 0.5;0.5; 0;0;0;0
 map/goo;1;1883;1080;1080; 0.5;0.5; 0;0;0;0
 map/no goo;1;802;1080;1080; 0.5;0.5; 0;0;0;0
