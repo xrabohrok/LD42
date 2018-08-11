@@ -4,7 +4,7 @@
 # To import these sprites into your Unity project, download "TexturePackerImporter":
 # https://www.codeandweb.com/texturepacker/unity
 #
-# $TexturePacker:SmartUpdate:592fbe7915bd60b93ac26ee4397d5ecd:b5d354ce94730e23cb88b45d24410fd9:f683c4e9aa78f29e0ed6c6b94537e31d$
+# $TexturePacker:SmartUpdate:bca5f0d66da8ff61cc6e02fd4e0d4469:4bfca64a4aa473501143b05e16ddbccc:f683c4e9aa78f29e0ed6c6b94537e31d$
 #
 :format=40300
 :texture=sprites_all.png
@@ -15,23 +15,27 @@
 enemy/alien/alien_34_l;1;4045;50;50; 0.5;0.5; 0;0;0;0
 enemy/alien/alien_34_r;52;4045;50;50; 0.5;0.5; 0;0;0;0
 enemy/alien/alien_back;103;4045;50;50; 0.5;0.5; 0;0;0;0
-enemy/alien/alien_front;154;4045;50;50; 0.5;0.5; 0;0;0;0
-enemy/alien/alien_l;205;4045;50;50; 0.5;0.5; 0;0;0;0
-enemy/alien/alien_r;256;4045;50;50; 0.5;0.5; 0;0;0;0
-enemy/slug/die1;307;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/die2;356;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/die3;405;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/die4;454;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/down_run1;503;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/down_run2;552;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/downAngle_run1;601;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/downAngle_run2;650;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/side_run1;699;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/side_run2;748;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/up_run1;797;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/up_run2;846;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/upAngle_run1;895;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/upAngle_run2;944;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/alien/alien_die1;154;4045;50;50; 0.5;0.5; 0;0;0;0
+enemy/alien/alien_die2;205;4045;50;50; 0.5;0.5; 0;0;0;0
+enemy/alien/alien_die3;256;4045;50;50; 0.5;0.5; 0;0;0;0
+enemy/alien/alien_die4;307;4045;50;50; 0.5;0.5; 0;0;0;0
+enemy/alien/alien_front;358;4045;50;50; 0.5;0.5; 0;0;0;0
+enemy/alien/alien_l;409;4045;50;50; 0.5;0.5; 0;0;0;0
+enemy/alien/alien_r;460;4045;50;50; 0.5;0.5; 0;0;0;0
+enemy/slug/die1;511;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/die2;560;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/die3;609;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/die4;658;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/down_run1;707;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/down_run2;756;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/downAngle_run1;805;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/downAngle_run2;854;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/side_run1;903;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/side_run2;952;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/up_run1;1001;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/up_run2;1050;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/upAngle_run1;1099;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/upAngle_run2;1148;4047;48;48; 0.5;0.5; 0;0;0;0
 map/arena;1;2964;1080;1080; 0.5;0.5; 0;0;0;0
 map/goo;1;1883;1080;1080; 0.5;0.5; 0;0;0;0
 map/no goo;1;802;1080;1080; 0.5;0.5; 0;0;0;0
