@@ -4,7 +4,7 @@
 # To import these sprites into your Unity project, download "TexturePackerImporter":
 # https://www.codeandweb.com/texturepacker/unity
 #
-# $TexturePacker:SmartUpdate:2a3b36e8e1dc3ffae2eb7308ee162bb8:bc79f278fbb520e876035ee1ff653f3d:f683c4e9aa78f29e0ed6c6b94537e31d$
+# $TexturePacker:SmartUpdate:0f4fee69f771e32001bfee96f1dc38f7:899bf96195ab1f65b161cd6f98f1198c:f683c4e9aa78f29e0ed6c6b94537e31d$
 #
 :format=40300
 :texture=sprites_all.png
@@ -12,7 +12,21 @@
 :pivotpoints=enabled
 :borders=disabled
 
-map/goo;1;3015;1080;1080; 0.5;0.5; 0;0;0;0
+enemy/slug/die1;1;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/die2;50;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/die3;99;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/die4;148;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/down_run1;197;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/down_run2;246;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/downAngle_run1;295;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/downAngle_run2;344;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/side_run1;393;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/side_run2;442;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/up_run1;491;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/up_run2;540;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/upAngle_run1;589;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/upAngle_run2;638;4047;48;48; 0.5;0.5; 0;0;0;0
+map/goo;687;3015;1080;1080; 0.5;0.5; 0;0;0;0
 map/no goo;1;1934;1080;1080; 0.5;0.5; 0;0;0;0
 shooter/bullets/crossb_1;1082;3007;7;7; 0.5;0.5; 0;0;0;0
 shooter/bullets/crossb_2;1090;3007;7;7; 0.5;0.5; 0;0;0;0
@@ -34,3 +48,5 @@ shooter/chassis/walk3;1526;2950;64;64; 0.5;0.5; 0;0;0;0
 shooter/chassis/walk4;1591;2950;64;64; 0.5;0.5; 0;0;0;0
 shooter/chassis/walk5;1526;2950;64;64; 0.5;0.5; 0;0;0;0
 shooter/chassis/walk6;1591;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk7;1526;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk8;1591;2950;64;64; 0.5;0.5; 0;0;0;0

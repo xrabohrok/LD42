@@ -24,6 +24,22 @@ TextureImporter:
     21300038: shooter-bullets-spirb_2
     21300040: shooter-bullets-crossb_1
     21300042: shooter-bullets-crossb_2
+    21300044: enemy-slug-die1
+    21300046: enemy-slug-die2
+    21300048: enemy-slug-die3
+    21300050: enemy-slug-die4
+    21300052: enemy-slug-down_run1
+    21300054: enemy-slug-down_run2
+    21300056: enemy-slug-downAngle_run1
+    21300058: enemy-slug-downAngle_run2
+    21300060: enemy-slug-side_run1
+    21300062: enemy-slug-side_run2
+    21300064: enemy-slug-up_run1
+    21300066: enemy-slug-up_run2
+    21300068: enemy-slug-upAngle_run1
+    21300070: enemy-slug-upAngle_run2
+    21300072: shooter-chassis-walk7
+    21300074: shooter-chassis-walk8
     2186277476908879412: ImportLogs
   externalObjects: {}
   serializedVersion: 7
@@ -107,10 +123,290 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: map-goo
+      name: enemy-slug-die1
       rect:
         serializedVersion: 2
         x: 1
+        y: 4047
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01e13d794296bb345a21ca98733c8269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy-slug-die2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 4047
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84fb7c91c80e3004893510184e3e76c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy-slug-die3
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 4047
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c439f5da2e8baea43932f560afa98706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy-slug-die4
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 4047
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 536e12eb05ab82f4c8d6eadf520a85ac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy-slug-down_run1
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 4047
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30517fffd4e30214e865c7b62e4846ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy-slug-down_run2
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 4047
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 509dc1b9924c32b409c7053c4a8597d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy-slug-downAngle_run1
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 4047
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6952c613c0383a149810825e99e1f2d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy-slug-downAngle_run2
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 4047
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 907aa8592da2deb4b8edb71355dc9207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy-slug-side_run1
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 4047
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9115ea121b7cc6d46b2cdb2a590a3d0d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy-slug-side_run2
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 4047
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a55bf3036100108418f584af7488972a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy-slug-up_run1
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 4047
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 156eb6ae1dacc324d9ecd105aeefae4f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy-slug-up_run2
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 4047
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47ca04e371eb2c140af6b9612258f43e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy-slug-upAngle_run1
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 4047
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93ff83acd6f467b42859c8be2319be13
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy-slug-upAngle_run2
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 4047
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 893884ab280b1da4293859b3f98b0cc2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map-goo
+      rect:
+        serializedVersion: 2
+        x: 687
         y: 3015
         width: 1080
         height: 1080
@@ -121,7 +417,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5994e36bdbcb6e443baa57405006950a
+      spriteID: 310f431179302cf41ae94992fe222a32
       vertices: []
       indices: 
       edges: []
@@ -141,7 +437,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 25d42783c327236418e0197451720f03
+      spriteID: e5254bd2cd590154e8a8f8e8ea5563e2
       vertices: []
       indices: 
       edges: []
@@ -161,7 +457,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 90430303bc379b24eb7bec65157ef6de
+      spriteID: 37d480c153a0fcb448f1faae21efaab0
       vertices: []
       indices: 
       edges: []
@@ -181,7 +477,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 913cea4d64b21954387c1d33f64a4946
+      spriteID: e9fd5f0aff16a97418aa5e3cb003620a
       vertices: []
       indices: 
       edges: []
@@ -201,7 +497,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 503cf7a4b25a488439bfacc8113c42c8
+      spriteID: 69398768362e8314ba6c0a1d74cd0ff1
       vertices: []
       indices: 
       edges: []
@@ -221,7 +517,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bff75980f1d50be4bb185aa7c89c7acf
+      spriteID: 6889f2453f7f86d4793cd1f35e5508e8
       vertices: []
       indices: 
       edges: []
@@ -241,7 +537,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: da1e3e1c68f25334eab058dbaa1f996c
+      spriteID: 03ab6f2b536be8249aa5c4273905e9a7
       vertices: []
       indices: 
       edges: []
@@ -261,7 +557,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 813c240a36276ba4195ea049585bd4cd
+      spriteID: abc3d8b974e606840bbbd9a97484a5b8
       vertices: []
       indices: 
       edges: []
@@ -281,7 +577,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 97c63170aa2339d43b054582cc8df769
+      spriteID: a4d55f7c24105d249a088efe62c0057c
       vertices: []
       indices: 
       edges: []
@@ -301,7 +597,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: efe98f036a291fd4baf15b69c968c132
+      spriteID: e8f685617a6b8c045882d14100c6967d
       vertices: []
       indices: 
       edges: []
@@ -321,7 +617,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f5ce613094c3a449a407e45744bef43
+      spriteID: 842fffbc3d8dd97468273b38334a6cb8
       vertices: []
       indices: 
       edges: []
@@ -341,7 +637,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14fe9fe0f5cae9d45a96f3dbdaa7fe74
+      spriteID: fc1bde66d0270ec4d8ed9b6956dcc63b
       vertices: []
       indices: 
       edges: []
@@ -361,7 +657,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ba5141fcbabe0b548a2b92a68ed91915
+      spriteID: ba75af8313f05fc4c83e5c28e3a12baa
       vertices: []
       indices: 
       edges: []
@@ -381,7 +677,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ab7286996e961984d8c2c32f1e2cb100
+      spriteID: b888b0580006487458b1ccb579a66988
       vertices: []
       indices: 
       edges: []
@@ -401,7 +697,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 99e9ba9e0b6e466489275155a4199df4
+      spriteID: a6edc1e59960ca8489a484c44c6e7696
       vertices: []
       indices: 
       edges: []
@@ -421,7 +717,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 09bcf4dac61c4264faf2ab4ee828b653
+      spriteID: 6747a23321ec5fa4f85be7d59745a77f
       vertices: []
       indices: 
       edges: []
@@ -441,7 +737,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3887e8236a84bcf448c82f753ef543b4
+      spriteID: 2af6bf979d827c44da9aece8a365138d
       vertices: []
       indices: 
       edges: []
@@ -461,7 +757,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ba5261c2dd01e94d8330acf0dabbd75
+      spriteID: ce8eb4091a73d29458fcab8dffd449af
       vertices: []
       indices: 
       edges: []
@@ -481,7 +777,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fb2ae50faede90a429d6e9dc6ec10294
+      spriteID: 69449808b1a4f6e4cad320a11cb85466
       vertices: []
       indices: 
       edges: []
@@ -501,7 +797,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3cac615d82e36d54f89775a1e0ef6533
+      spriteID: edd5b52706bacf64798452c8efe90f28
       vertices: []
       indices: 
       edges: []
@@ -521,7 +817,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 44262accd661cd04ea795e16dda4e0d6
+      spriteID: ecaf6925447de9d4e96050522f959896
       vertices: []
       indices: 
       edges: []
@@ -541,7 +837,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 935f1269a407b3c4bb665e5305f463b4
+      spriteID: 8a7610121821ccc4ba11e6cedee874c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shooter-chassis-walk7
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 2950
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da95764943abb204b97e090d3111d4b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shooter-chassis-walk8
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 2950
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02c4a38bba264264980e13b1ac903ed0
       vertices: []
       indices: 
       edges: []
