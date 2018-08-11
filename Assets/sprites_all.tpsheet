@@ -4,7 +4,7 @@
 # To import these sprites into your Unity project, download "TexturePackerImporter":
 # https://www.codeandweb.com/texturepacker/unity
 #
-# $TexturePacker:SmartUpdate:d02d72632ccb4f5940e92214cb16a716:667d1e05d7ed47c5ba7c24955db3869d:f683c4e9aa78f29e0ed6c6b94537e31d$
+# $TexturePacker:SmartUpdate:c75664f19212dc9ba3a070a42cc11deb:3d1a541b8cf9e214692b88c1709a62bd:f683c4e9aa78f29e0ed6c6b94537e31d$
 #
 :format=40300
 :texture=sprites_all.png
@@ -26,32 +26,33 @@ enemy/slug/up_run1;491;4047;48;48; 0.5;0.5; 0;0;0;0
 enemy/slug/up_run2;540;4047;48;48; 0.5;0.5; 0;0;0;0
 enemy/slug/upAngle_run1;589;4047;48;48; 0.5;0.5; 0;0;0;0
 enemy/slug/upAngle_run2;638;4047;48;48; 0.5;0.5; 0;0;0;0
-map/goo;687;3015;1080;1080; 0.5;0.5; 0;0;0;0
-map/no goo;1;1934;1080;1080; 0.5;0.5; 0;0;0;0
-shooter/bullets/crossb_1;1082;3007;7;7; 0.5;0.5; 0;0;0;0
-shooter/bullets/crossb_2;1090;3007;7;7; 0.5;0.5; 0;0;0;0
-shooter/bullets/moonb_1;1098;2998;16;16; 0.5;0.5; 0;0;0;0
-shooter/bullets/moonb_2;1115;2998;16;16; 0.5;0.5; 0;0;0;0
-shooter/bullets/moonb_3;1132;2998;16;16; 0.5;0.5; 0;0;0;0
-shooter/bullets/spirb_1;1149;3006;8;8; 0.5;0.5; 0;0;0;0
-shooter/bullets/spirb_2;1158;3006;8;8; 0.5;0.5; 0;0;0;0
-shooter/bullets/starb_1;1167;2998;16;16; 0.5;0.5; 0;0;0;0
-shooter/bullets/starb_2;1184;2998;16;16; 0.5;0.5; 0;0;0;0
-shooter/chassis/idle1;1201;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/idle2;1266;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/startCleaning1;1331;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/startCleaning2;1396;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/startCleaning3;1461;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk1;1526;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk2;1591;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk3;1656;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk4;1721;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk5;1786;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk6;1851;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk7;1916;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk8;1981;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/gun1/down;1;1869;64;64; 0.5;0.5; 0;0;0;0
-shooter/gun1/downAngle;66;1869;64;64; 0.5;0.5; 0;0;0;0
-shooter/gun1/side;131;1869;64;64; 0.5;0.5; 0;0;0;0
-shooter/gun1/up;196;1869;64;64; 0.5;0.5; 0;0;0;0
-shooter/gun1/upAngle;261;1869;64;64; 0.5;0.5; 0;0;0;0
+map/arena;687;3015;1080;1080; 0.5;0.5; 0;0;0;0
+map/goo;1;1934;1080;1080; 0.5;0.5; 0;0;0;0
+map/no goo;1;853;1080;1080; 0.5;0.5; 0;0;0;0
+shooter/bullets/crossb_1;1082;1926;7;7; 0.5;0.5; 0;0;0;0
+shooter/bullets/crossb_2;1090;1926;7;7; 0.5;0.5; 0;0;0;0
+shooter/bullets/moonb_1;1098;1917;16;16; 0.5;0.5; 0;0;0;0
+shooter/bullets/moonb_2;1115;1917;16;16; 0.5;0.5; 0;0;0;0
+shooter/bullets/moonb_3;1132;1917;16;16; 0.5;0.5; 0;0;0;0
+shooter/bullets/spirb_1;1149;1925;8;8; 0.5;0.5; 0;0;0;0
+shooter/bullets/spirb_2;1158;1925;8;8; 0.5;0.5; 0;0;0;0
+shooter/bullets/starb_1;1167;1917;16;16; 0.5;0.5; 0;0;0;0
+shooter/bullets/starb_2;1184;1917;16;16; 0.5;0.5; 0;0;0;0
+shooter/chassis/idle1;1201;1869;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/idle2;1266;1869;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/startCleaning1;1331;1869;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/startCleaning2;1396;1869;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/startCleaning3;1461;1869;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk1;1526;1869;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk2;1591;1869;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk3;1656;1869;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk4;1721;1869;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk5;1786;1869;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk6;1851;1869;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk7;1916;1869;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk8;1981;1869;64;64; 0.5;0.5; 0;0;0;0
+shooter/gun1/down;1;788;64;64; 0.5;0.5; 0;0;0;0
+shooter/gun1/downAngle;66;788;64;64; 0.5;0.5; 0;0;0;0
+shooter/gun1/side;131;788;64;64; 0.5;0.5; 0;0;0;0
+shooter/gun1/up;196;788;64;64; 0.5;0.5; 0;0;0;0
+shooter/gun1/upAngle;261;788;64;64; 0.5;0.5; 0;0;0;0
