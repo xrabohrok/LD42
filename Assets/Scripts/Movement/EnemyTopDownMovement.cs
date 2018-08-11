@@ -101,8 +101,11 @@ public class EnemyTopDownMovement : TopDownMovement {
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        this.hp -= collision.gameObject.GetComponent<BulletScript>().bulletDamage;
-        Destroy(collision.gameObject);
+        if (collision.tag == "Bullet")
+        {
+            this.hp -= collision.gameObject.GetComponent<BulletScript>().bulletDamage;
+            Destroy(collision.gameObject);
+        }
     }
 
     public void Death()
