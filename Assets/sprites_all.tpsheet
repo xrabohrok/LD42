@@ -4,7 +4,7 @@
 # To import these sprites into your Unity project, download "TexturePackerImporter":
 # https://www.codeandweb.com/texturepacker/unity
 #
-# $TexturePacker:SmartUpdate:d599b5b3ecc7c810c5f6d7b12ac72336:b42f050750760e278a0a18e8a8b7b87b:f683c4e9aa78f29e0ed6c6b94537e31d$
+# $TexturePacker:SmartUpdate:67a0c5339289271d2c559440873c80f2:0273984cf9282a87393f72e894aa1c06:f683c4e9aa78f29e0ed6c6b94537e31d$
 #
 :format=40300
 :texture=sprites_all.png
@@ -14,32 +14,38 @@
 
 enemy/alien/alien_34_l;1;4045;50;50; 0.5;0.5; 0;0;0;0
 enemy/alien/alien_34_r;52;4045;50;50; 0.5;0.5; 0;0;0;0
-enemy/alien/alien_back;103;4045;50;50; 0.5;0.5; 0;0;0;0
-enemy/alien/alien_die1;154;4045;50;50; 0.5;0.5; 0;0;0;0
-enemy/alien/alien_die2;205;4045;50;50; 0.5;0.5; 0;0;0;0
-enemy/alien/alien_die3;256;4045;50;50; 0.5;0.5; 0;0;0;0
-enemy/alien/alien_die4;307;4045;50;50; 0.5;0.5; 0;0;0;0
-enemy/alien/alien_front;358;4045;50;50; 0.5;0.5; 0;0;0;0
-enemy/alien/alien_l;409;4045;50;50; 0.5;0.5; 0;0;0;0
-enemy/alien/alien_r;460;4045;50;50; 0.5;0.5; 0;0;0;0
-enemy/slug/die1;511;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/die2;560;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/die3;609;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/die4;658;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/down_run1;707;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/down_run2;756;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/downAngle_run1;805;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/downAngle_run2;854;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/side_run1;903;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/side_run2;952;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/spawn1;1001;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/spawn2;1050;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/spawn3;1099;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/spawn4;1148;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/up_run1;1197;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/up_run2;1246;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/upAngle_run1;1295;4047;48;48; 0.5;0.5; 0;0;0;0
-enemy/slug/upAngle_run2;1344;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/alien/alien_attack_34_l;103;4045;50;50; 0.5;0.5; 0;0;0;0
+enemy/alien/alien_attack_34_r;154;4045;50;50; 0.5;0.5; 0;0;0;0
+enemy/alien/alien_attack_back;205;4045;50;50; 0.5;0.5; 0;0;0;0
+enemy/alien/alien_attack_l;256;4045;50;50; 0.5;0.5; 0;0;0;0
+enemy/alien/alien_attack_r;307;4045;50;50; 0.5;0.5; 0;0;0;0
+enemy/alien/alien_back;358;4045;50;50; 0.5;0.5; 0;0;0;0
+enemy/alien/alien_die1;409;4045;50;50; 0.5;0.5; 0;0;0;0
+enemy/alien/alien_die2;460;4045;50;50; 0.5;0.5; 0;0;0;0
+enemy/alien/alien_die3;511;4045;50;50; 0.5;0.5; 0;0;0;0
+enemy/alien/alien_die4;562;4045;50;50; 0.5;0.5; 0;0;0;0
+enemy/alien/alien_front;613;4045;50;50; 0.5;0.5; 0;0;0;0
+enemy/alien/alien_front_attack;664;4045;50;50; 0.5;0.5; 0;0;0;0
+enemy/alien/alien_l;715;4045;50;50; 0.5;0.5; 0;0;0;0
+enemy/alien/alien_r;766;4045;50;50; 0.5;0.5; 0;0;0;0
+enemy/slug/die1;817;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/die2;866;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/die3;915;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/die4;964;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/down_run1;1013;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/down_run2;1062;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/downAngle_run1;1111;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/downAngle_run2;1160;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/side_run1;1209;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/side_run2;1258;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/spawn1;1307;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/spawn2;1356;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/spawn3;1405;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/spawn4;1454;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/up_run1;1503;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/up_run2;1552;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/upAngle_run1;1601;4047;48;48; 0.5;0.5; 0;0;0;0
+enemy/slug/upAngle_run2;1650;4047;48;48; 0.5;0.5; 0;0;0;0
 map/arena;1;2964;1080;1080; 0.5;0.5; 0;0;0;0
 map/goo;1;1883;1080;1080; 0.5;0.5; 0;0;0;0
 map/no goo;1;802;1080;1080; 0.5;0.5; 0;0;0;0
@@ -88,6 +94,11 @@ shooter/gun1/downAngle;976;737;64;64; 0.5;0.5; 0;0;0;0
 shooter/gun1/side;1041;737;64;64; 0.5;0.5; 0;0;0;0
 shooter/gun1/up;1106;737;64;64; 0.5;0.5; 0;0;0;0
 shooter/gun1/upAngle;1171;737;64;64; 0.5;0.5; 0;0;0;0
-UI/batteryBar;1236;791;52;10; 0.5;0.5; 0;0;0;0
-UI/batteryFrame;1289;783;63;18; 0.5;0.5; 0;0;0;0
-UI/pointsIcon;1353;781;18;20; 0.5;0.5; 0;0;0;0
+shooter/gun2/down;1236;737;64;64; 0.5;0.5; 0;0;0;0
+shooter/gun2/downAngle;1301;737;64;64; 0.5;0.5; 0;0;0;0
+shooter/gun2/side;1366;737;64;64; 0.5;0.5; 0;0;0;0
+shooter/gun2/up;1431;737;64;64; 0.5;0.5; 0;0;0;0
+shooter/gun2/upAngle;1496;737;64;64; 0.5;0.5; 0;0;0;0
+UI/batteryBar;1561;791;52;10; 0.5;0.5; 0;0;0;0
+UI/batteryFrame;1614;783;63;18; 0.5;0.5; 0;0;0;0
+UI/pointsIcon;1678;781;18;20; 0.5;0.5; 0;0;0;0
