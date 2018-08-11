@@ -8,11 +8,17 @@ public class PlayerTopDownMovement : TopDownMovement {
 
     public enum PlayerState { Walking, Standing, Flinching, Attacking, }
     public PlayerState playerState;
-    public GameObject bullet;
+
+  
     public GameObject cleaner;
 
     public GameObject holding;
     //public GameObject interactionZone;
+
+
+    public GameObject currentGun;
+    public GameObject[] gunsInInventory;
+    
 
     public void Awake()
     {
@@ -77,17 +83,7 @@ public class PlayerTopDownMovement : TopDownMovement {
 
     public void HandleShootingInput()
     {
-        float speed = 5.0f;
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector2 playerPos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
-            Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 direction = new Vector2(worldPoint.x, worldPoint.y) - playerPos;
-            direction.Normalize();
-            // Spawn bullet object from player position moving in vector between player and mouse cursor.
-            GameObject shotFired = Instantiate(bullet, new Vector3(playerPos.x, playerPos.y, 0), Quaternion.identity);
-            shotFired.GetComponent<Rigidbody2D>().velocity = direction * speed;
-        }
+        currentGun.GetComponent<BaseGunScript>().Shoot();
     }
 
     public void HandleCleanerInput()

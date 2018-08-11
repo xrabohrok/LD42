@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 360571730}
   - component: {fileID: 360571729}
   m_Layer: 10
-  m_Name: shooter-chassis-idle1
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -335,8 +335,8 @@ MonoBehaviour:
   busyHandlingInput: 0
   facing: 0
   playerState: 0
-  bullet: {fileID: 1170382960635136, guid: c116e3ae49b2e6e459802c6efa8624d1, type: 2}
-  holding: {fileID: 0}
+  currentGun: {fileID: 1375714088551110, guid: 25ef4cf7b1b23764bbce6897e5edda63, type: 2}
+  gunsInInventory: []
 --- !u!212 &360571733
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -372,7 +372,7 @@ SpriteRenderer:
   m_SortingLayerID: 1013997245
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300008, guid: 494236404efb3584db0629ae916b9969, type: 3}
+  m_Sprite: {fileID: 21300018, guid: 494236404efb3584db0629ae916b9969, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -435,6 +435,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 212439096144171466, guid: 948eacf6962575b4b8eee18888e2287e,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300064, guid: 494236404efb3584db0629ae916b9969,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 948eacf6962575b4b8eee18888e2287e, type: 2}
   m_IsPrefabAsset: 0

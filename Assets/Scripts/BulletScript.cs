@@ -16,4 +16,12 @@ public class BulletScript : MonoBehaviour {
 	void Update () {
 		
 	}
+	
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.tag == "Background")
+		{
+			Destroy(this.gameObject);
+		}
+	}
 }
