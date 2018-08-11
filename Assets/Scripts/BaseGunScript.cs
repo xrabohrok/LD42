@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class BaseGunScript : MonoBehaviour {
 
-    public GameObject player;
+    private GameObject player;
     public GameObject bulletPrefab;
     public int bulletDamage;
     public float bulletSpeed;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 	
 	// Update is called once per frame
 	void Update () {
