@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Map
   - Enemy
+  - GooPile
   layers:
   - Default
   - TransparentFX

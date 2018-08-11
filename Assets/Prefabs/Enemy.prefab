@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 50378545219578150}
   m_Layer: 10
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,6 +131,7 @@ MonoBehaviour:
   player: {fileID: 0}
   interactionRange: 1
   hp: 100
+  gooPrefab: {fileID: 1886598961940816, guid: c2ef8f9be317cf24aad66016bb62af84, type: 2}
 --- !u!212 &212439096144171466
 SpriteRenderer:
   m_ObjectHideFlags: 1
