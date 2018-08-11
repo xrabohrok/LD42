@@ -200,9 +200,9 @@ GameObject:
   - component: {fileID: 253788827}
   - component: {fileID: 253788829}
   - component: {fileID: 253788828}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: map-arena
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -362,8 +362,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -700220583
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300086, guid: 494236404efb3584db0629ae916b9969, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -374,7 +374,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!1 &360571728
 GameObject:
