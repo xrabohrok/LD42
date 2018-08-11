@@ -111,6 +111,7 @@ public class EnemyTopDownMovement : TopDownMovement {
         EventManager.TriggerEvent("ENEMY_DIED");
         Destroy(gameObject);
     }
+    
     public void OnDestroy()
     {
         
