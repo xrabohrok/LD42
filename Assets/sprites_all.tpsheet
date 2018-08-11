@@ -4,7 +4,7 @@
 # To import these sprites into your Unity project, download "TexturePackerImporter":
 # https://www.codeandweb.com/texturepacker/unity
 #
-# $TexturePacker:SmartUpdate:e2b5d29b961c061883c7a701da0c89bd:2b3e977c65c1ea40fa8dd575cbc053f5:f683c4e9aa78f29e0ed6c6b94537e31d$
+# $TexturePacker:SmartUpdate:9b0ce2c79e04557d354c3cf17c0c233f:ec3164d71fe161f9155ca857e04326e1:f683c4e9aa78f29e0ed6c6b94537e31d$
 #
 :format=40300
 :texture=sprites_all.png
@@ -14,21 +14,23 @@
 
 map/goo;1;3015;1080;1080; 0.5;0.5; 0;0;0;0
 map/no goo;1;1934;1080;1080; 0.5;0.5; 0;0;0;0
-shooter/bullets/moonb_1;1082;2998;16;16; 0.5;0.5; 0;0;0;0
-shooter/bullets/moonb_2;1099;2998;16;16; 0.5;0.5; 0;0;0;0
-shooter/bullets/moonb_3;1116;2998;16;16; 0.5;0.5; 0;0;0;0
-shooter/bullets/spirb_1;1133;3006;8;8; 0.5;0.5; 0;0;0;0
-shooter/bullets/spirb_2;1142;3006;8;8; 0.5;0.5; 0;0;0;0
-shooter/bullets/starb_1;1151;2998;16;16; 0.5;0.5; 0;0;0;0
-shooter/bullets/starb_2;1168;2998;16;16; 0.5;0.5; 0;0;0;0
-shooter/chassis/idle1;1185;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/idle2;1250;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/startCleaning1;1315;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/startCleaning2;1380;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/startCleaning3;1445;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk1;1510;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk2;1575;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk3;1510;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk4;1575;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk5;1510;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk6;1575;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/bullets/crossb_1;1082;3007;7;7; 0.5;0.5; 0;0;0;0
+shooter/bullets/crossb_2;1090;3007;7;7; 0.5;0.5; 0;0;0;0
+shooter/bullets/moonb_1;1098;2998;16;16; 0.5;0.5; 0;0;0;0
+shooter/bullets/moonb_2;1115;2998;16;16; 0.5;0.5; 0;0;0;0
+shooter/bullets/moonb_3;1132;2998;16;16; 0.5;0.5; 0;0;0;0
+shooter/bullets/spirb_1;1149;3006;8;8; 0.5;0.5; 0;0;0;0
+shooter/bullets/spirb_2;1158;3006;8;8; 0.5;0.5; 0;0;0;0
+shooter/bullets/starb_1;1167;2998;16;16; 0.5;0.5; 0;0;0;0
+shooter/bullets/starb_2;1184;2998;16;16; 0.5;0.5; 0;0;0;0
+shooter/chassis/idle1;1201;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/idle2;1266;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/startCleaning1;1331;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/startCleaning2;1396;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/startCleaning3;1461;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk1;1526;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk2;1591;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk3;1526;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk4;1591;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk5;1526;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk6;1591;2950;64;64; 0.5;0.5; 0;0;0;0
