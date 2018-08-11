@@ -24,6 +24,7 @@ public class PlayerTopDownMovement : TopDownMovement {
     protected override void Start()
     {
         facing = Facing.South;
+        currentGun = Instantiate(currentGun, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
 
         base.Start();
     }
