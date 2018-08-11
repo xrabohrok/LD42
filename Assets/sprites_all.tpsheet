@@ -4,7 +4,7 @@
 # To import these sprites into your Unity project, download "TexturePackerImporter":
 # https://www.codeandweb.com/texturepacker/unity
 #
-# $TexturePacker:SmartUpdate:0f4fee69f771e32001bfee96f1dc38f7:899bf96195ab1f65b161cd6f98f1198c:f683c4e9aa78f29e0ed6c6b94537e31d$
+# $TexturePacker:SmartUpdate:df281bc827038a29503e6d7b8d9046b0:6bf2addeacbd6b60ac1122ab30391e07:f683c4e9aa78f29e0ed6c6b94537e31d$
 #
 :format=40300
 :texture=sprites_all.png
@@ -44,9 +44,14 @@ shooter/chassis/startCleaning2;1396;2950;64;64; 0.5;0.5; 0;0;0;0
 shooter/chassis/startCleaning3;1461;2950;64;64; 0.5;0.5; 0;0;0;0
 shooter/chassis/walk1;1526;2950;64;64; 0.5;0.5; 0;0;0;0
 shooter/chassis/walk2;1591;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk3;1526;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk4;1591;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk5;1526;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk6;1591;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk7;1526;2950;64;64; 0.5;0.5; 0;0;0;0
-shooter/chassis/walk8;1591;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk3;1656;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk4;1721;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk5;1786;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk6;1851;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk7;1916;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/chassis/walk8;1981;2950;64;64; 0.5;0.5; 0;0;0;0
+shooter/gun1/down;1;1869;64;64; 0.5;0.5; 0;0;0;0
+shooter/gun1/downAngle;66;1869;64;64; 0.5;0.5; 0;0;0;0
+shooter/gun1/side;131;1869;64;64; 0.5;0.5; 0;0;0;0
+shooter/gun1/up;196;1869;64;64; 0.5;0.5; 0;0;0;0
+shooter/gun1/upAngle;261;1869;64;64; 0.5;0.5; 0;0;0;0
