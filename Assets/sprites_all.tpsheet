@@ -4,7 +4,7 @@
 # To import these sprites into your Unity project, download "TexturePackerImporter":
 # https://www.codeandweb.com/texturepacker/unity
 #
-# $TexturePacker:SmartUpdate:f6d5f778215a6d7a20d8f39a306e97bd:2e9f594d6b6c23eb7ce4b2f7a80ce4a1:f683c4e9aa78f29e0ed6c6b94537e31d$
+# $TexturePacker:SmartUpdate:7edd9b3318330824b7db93b0720d9ac9:4c5becd5e8edb6e173f2b2603abce3eb:f683c4e9aa78f29e0ed6c6b94537e31d$
 #
 :format=40300
 :texture=sprites_all.png
@@ -135,11 +135,12 @@ shooter/gun3/upAngle;2731;1349;64;64; 0.5;0.5; 0;0;0;0
 UI/batteryBar;2796;1403;52;10; 0.5;0.5; 0;0;0;0
 UI/batteryFrame;2849;1395;63;18; 0.5;0.5; 0;0;0;0
 UI/pointsIcon;2913;1393;18;20; 0.5;0.5; 0;0;0;0
-UI/shop/platform-frontCables;2932;1013;400;400; 0.5;0.5; 0;0;0;0
-UI/shop/platform;3333;1013;400;400; 0.5;0.5; 0;0;0;0
-UI/shop/shopkeeper/idle1;3734;1349;64;64; 0.5;0.5; 0;0;0;0
-UI/shop/shopkeeper/idle2;3799;1349;64;64; 0.5;0.5; 0;0;0;0
-UI/shop/shopkeeper/talk1;3864;1349;64;64; 0.5;0.5; 0;0;0;0
-UI/shop/shopkeeper/talk2;3929;1349;64;64; 0.5;0.5; 0;0;0;0
-UI/shop/shopkeeper/talk3;3994;1349;64;64; 0.5;0.5; 0;0;0;0
-UI/shop/shopkeeperPortrait;1;212;800;800; 0.5;0.5; 0;0;0;0
+UI/shop/dialogbox;2932;1235;730;178; 0.5;0.5; 0;0;0;0
+UI/shop/platform-frontCables;3663;1013;400;400; 0.5;0.5; 0;0;0;0
+UI/shop/platform;1;612;400;400; 0.5;0.5; 0;0;0;0
+UI/shop/shopkeeper/idle1;402;948;64;64; 0.5;0.5; 0;0;0;0
+UI/shop/shopkeeper/idle2;467;948;64;64; 0.5;0.5; 0;0;0;0
+UI/shop/shopkeeper/talk1;532;948;64;64; 0.5;0.5; 0;0;0;0
+UI/shop/shopkeeper/talk2;597;948;64;64; 0.5;0.5; 0;0;0;0
+UI/shop/shopkeeper/talk3;662;948;64;64; 0.5;0.5; 0;0;0;0
+UI/shop/shopkeeperPortrait;727;212;800;800; 0.5;0.5; 0;0;0;0
