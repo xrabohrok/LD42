@@ -485,10 +485,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e5d6e3cd450f234a9889e42147badf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startAnimationDelay: 0.5
-  nextSceneDelay: 1.8
-  gameStartSceneIndex: 1
-  creditsSceneIndex: 4
+  startAnimationDelay: 0.18
+  nextSceneDelay: 0.27
+  gameStartSceneIndex: 2
+  creditsSceneIndex: 1
   sceneJumpAIndex: -1
 --- !u!1 &520780069
 GameObject:

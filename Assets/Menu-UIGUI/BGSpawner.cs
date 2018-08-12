@@ -47,7 +47,7 @@ public class BGSpawner : MonoBehaviour
 
 	    foreach (var spawnee in spawned)
 	    {
-	        if (spawnee.spawned.transform.position.x > topRightCorner.position.x + 10)
+	        if (spawnee.spawned.transform.position.x > topRightCorner.position.x + 3)
 	        {
                 setToLeftEdge(spawnee.spawned);
 	        }
@@ -61,7 +61,7 @@ public class BGSpawner : MonoBehaviour
     {
         var verticalArea = topRightCorner.position.y - bottomLeftCorner.position.y;
         var verticalPos = bottomLeftCorner.position.y + (float) rand.NextDouble() * verticalArea;
-        thing.transform.position = new Vector3(bottomLeftCorner.transform.position.x - 10, verticalPos);
+        thing.transform.position = new Vector3(bottomLeftCorner.transform.position.x - 3, verticalPos);
     }
 
     public class Spawnee
