@@ -9,7 +9,7 @@ public class BulletScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		Destroy(this.gameObject,5.0f);
 	}
 	
 	// Update is called once per frame
@@ -17,11 +17,13 @@ public class BulletScript : MonoBehaviour {
 		
 	}
 	
-	private void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.tag == "Background")
-		{
-			Destroy(this.gameObject);
-		}
-	}
+//	private void OnTriggerEnter2D(Collider2D other)
+//	{
+//		if (other.tag == "Background")
+//		{
+//			Destroy(this.gameObject);
+//		}
+//	}
+	
+	
 }
