@@ -14,6 +14,7 @@ public class DialogueEngine : MonoBehaviour
     private float timeToFinish;
     private float secondsPerCharacter;
     public float charactersPerSecond = 5;
+    public speaker defaultSpeaker;
     public List<speaker> speakers;
     public KeyCode continueKey = KeyCode.Space;
     private Dictionary<string, speaker> lookupPeeps;
@@ -31,8 +32,10 @@ public class DialogueEngine : MonoBehaviour
     private bool readyToAdvance;
     private bool choicesDrawn;
     private List<GameObject> currentChoices;
-    private TMP_FontAsset defaultFont;
+//    private TMP_FontAsset defaultFont;
     private TextMeshProUGUI tmpText;
+
+    public string defaultKnot;
 
     private bool advance;
 
@@ -62,7 +65,12 @@ public class DialogueEngine : MonoBehaviour
 	    portraitName = "";
 
 	    tmpText = GetComponentInChildren<TextMeshProUGUI>();
-	    defaultFont = tmpText.font;
+	    defaultSpeaker.speakerFont = tmpText.font;
+
+	    if (!String.IsNullOrEmpty(defaultKnot))
+	    {
+            storyPlayer.ChoosePathString(defaultKnot);
+	    }
 	}
 
     // Update is called once per frame
@@ -175,7 +183,6 @@ public class DialogueEngine : MonoBehaviour
                     profileCamera.transform.position = lookupPeeps[speaker.speakerName].camAngle.position;
                     profileCamera.transform.rotation = lookupPeeps[speaker.speakerName].camAngle.rotation;
                 }
-                hasPortrait = true;
                 portraitName = speaker.speakerName;
 
                 if (speaker.speakerFont != null)
@@ -184,16 +191,29 @@ public class DialogueEngine : MonoBehaviour
                 }
                 else
                 {
-                    tmpText.font = defaultFont;
+                    tmpText.font = defaultSpeaker.speakerFont;
                 }
             }
+            else
+            {
+                if (profileCamera != null)
+                {
+                    profileCamera.transform.position = defaultSpeaker.camAngle.position;
+                    profileCamera.transform.rotation = defaultSpeaker.camAngle.rotation;
+                }
+                tmpText.font = defaultSpeaker.speakerFont;
+
+            }
         }
-        if(anim != null) anim.SetBool("Portrait", hasPortrait) ;
+        hasPortrait = defaultSpeaker.forceSpeakerViewer || profileCamera != null;
+        if (anim != null) anim.SetBool("Portrait", hasPortrait) ;
         if (!hasPortrait)
         {
-            tmpText.font = defaultFont;
+            tmpText.font = defaultSpeaker.speakerFont;
         }
     }
+
+
 
     private void clearChoices()
     {
@@ -223,4 +243,5 @@ public class speaker
     public Animator speakerAnimator;
     public List<string> speakingTriggers;
     public TMP_FontAsset speakerFont;
+    public bool forceSpeakerViewer;
 }
