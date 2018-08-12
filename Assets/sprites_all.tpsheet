@@ -4,7 +4,7 @@
 # To import these sprites into your Unity project, download "TexturePackerImporter":
 # https://www.codeandweb.com/texturepacker/unity
 #
-# $TexturePacker:SmartUpdate:e356515c9b25276e0d75daecc573cd4a:4a4b84fb59ffaba0c143db258a203ce1:f683c4e9aa78f29e0ed6c6b94537e31d$
+# $TexturePacker:SmartUpdate:160a45ab06729bcc49a72a3201b144d5:de1b553bb14dae185252d1a72da9c6ea:f683c4e9aa78f29e0ed6c6b94537e31d$
 #
 :format=40300
 :texture=sprites_all.png
@@ -144,4 +144,4 @@ UI/shop/shopkeeper/talk1;532;948;64;64; 0.5;0.5; 0;0;0;0
 UI/shop/shopkeeper/talk2;597;948;64;64; 0.5;0.5; 0;0;0;0
 UI/shop/shopkeeper/talk3;662;948;64;64; 0.5;0.5; 0;0;0;0
 UI/shop/shopkeeperPortrait;727;212;800;800; 0.5;0.5; 0;0;0;0
-UI/shop/start;1528;880;317;132; 0.5;0.5; 0;0;0;0
+UI/shop/start;1528;879;308;133; 0.5;0.5; 0;0;0;0
