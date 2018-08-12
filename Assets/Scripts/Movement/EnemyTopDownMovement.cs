@@ -9,9 +9,10 @@ public class EnemyTopDownMovement : TopDownMovement {
 
     private bool enemyCanMove = true;
 
-    public float interactionRange = 1f;
+    public float interactionRange = 0.1f;
     public int hp = 100;
     private bool isDead = false;
+    public int bumpDamage = 10;
     
     
     public GameObject gooPrefab;
@@ -159,7 +160,6 @@ public class EnemyTopDownMovement : TopDownMovement {
                 ratio += 1;
             }
             
-            Debug.Log("Ratio set to: " + ratio);
             animator.SetFloat("rotation",ratio);
         }
         return unitVelocity;
