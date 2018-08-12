@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114323171033215330}
   - component: {fileID: 212760449276882842}
   - component: {fileID: 95072512102005296}
+  - component: {fileID: 114835419401824688}
   m_Layer: 10
   m_Name: SniperGun
   m_TagString: Untagged
@@ -51,7 +52,7 @@ Animator:
   m_GameObject: {fileID: 1375714088551110}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bf933d365a39f054d9e865f635c63e54, type: 2}
+  m_Controller: {fileID: 22100000, guid: 7edf6ee898a1d1c4fb48250660253d5d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -76,7 +77,17 @@ MonoBehaviour:
   bulletDamage: 0
   bulletSpeed: 0
   cooldownPeriod: 1
-  cooldownTimerStart: 0
+--- !u!114 &114835419401824688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1375714088551110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c49545d53b57f94dbec2adb794eabf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212760449276882842
 SpriteRenderer:
   m_ObjectHideFlags: 1
