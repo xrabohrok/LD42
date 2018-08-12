@@ -11,7 +11,8 @@ public class EnemySpawner : MonoBehaviour {
 	public int spawnDistance = 3;
     private Vector2 center;
 	private Vector2 pos;
-	
+
+    private float startTime;
 	
 
 	// Use this for initialization
@@ -19,8 +20,19 @@ public class EnemySpawner : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player");
         EventManager.StartListening("ENEMY_DIED", SpawnNewEnemy);
 	    center = new Vector2(0, 0);
+
+        startTime = Time.time;
 	}
-	
+
+    private void Update()
+    {
+        if(Time.time > startTime + 4f)
+        {
+            SpawnNewEnemy();
+            startTime = Time.time;
+        }
+    }
+
     public void SpawnNewEnemy()
     {
 	    Vector2 playerPos = player.transform.position;

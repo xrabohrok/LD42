@@ -9,59 +9,59 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1375714088551110}
+  m_RootGameObject: {fileID: 1194489091319950}
   m_IsPrefabAsset: 1
---- !u!1 &1375714088551110
+--- !u!1 &1194489091319950
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4843643007321402}
-  - component: {fileID: 114323171033215330}
-  - component: {fileID: 212760449276882842}
-  m_Layer: 10
-  m_Name: SniperGun
+  - component: {fileID: 4424922776917448}
+  - component: {fileID: 212852690813439828}
+  - component: {fileID: 114015941573755490}
+  m_Layer: 0
+  m_Name: GlobeGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4843643007321402
+--- !u!4 &4424922776917448
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1375714088551110}
+  m_GameObject: {fileID: 1194489091319950}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.510032, y: 0.71903664, z: -0.09046853}
+  m_LocalPosition: {x: 2.8506873, y: 1.8369341, z: 0.098895796}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114323171033215330
+--- !u!114 &114015941573755490
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1375714088551110}
+  m_GameObject: {fileID: 1194489091319950}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 365eb2a07bd6394458ef6288c12dddff, type: 3}
+  m_Script: {fileID: 11500000, guid: b712d18baf63a7548b4d7ceb6529b68b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1170382960635136, guid: c116e3ae49b2e6e459802c6efa8624d1,
     type: 2}
-  bulletDamage: 0
-  bulletSpeed: 0
---- !u!212 &212760449276882842
+  bulletDamage: 20
+  bulletSpeed: 4
+--- !u!212 &212852690813439828
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1375714088551110}
+  m_GameObject: {fileID: 1194489091319950}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -88,17 +88,17 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1013997245
-  m_SortingLayer: 3
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300170, guid: 494236404efb3584db0629ae916b9969, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
