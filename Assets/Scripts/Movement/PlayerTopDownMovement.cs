@@ -34,25 +34,42 @@ public class PlayerTopDownMovement : TopDownMovement {
     protected override void Start()
     {
         facing = Facing.South;
-        currentGun = Instantiate(currentGun, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+        EquipGun();
 
         base.Start();
     }
 
+//    private void Update()
+//    {
+//        PlayerStatus playerStatus = this.GetComponent<PlayerStatus>();
+//        if (!playerStatus.IsDead)
+//        {
+//           
+//        }
+//    }
+
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
     public override void FixedUpdate()
     {
-        HandleInput();
+        PlayerStatus playerStatus = this.GetComponent<PlayerStatus>();
+        if (!playerStatus.IsDead)
+        { 
+            if (!playerStatus.IsEquiped)
+            {
+                EquipGun();
+                playerStatus.IsEquiped = true;
+            }
+            HandleInput();
+        }
     }
 
     public void HandleInput()
     {
-        if (!this.GetComponent<PlayerStatus>().IsDead)
-        {
+        
             HandleMovementInput();
             HandleShootingInput();
             HandleCleanerInput();
-        }
+        
     }
 
     public void HandleMovementInput()
@@ -121,6 +138,19 @@ public class PlayerTopDownMovement : TopDownMovement {
 
     }
 
+    public void SetCurrentGun(GameObject newGun)
+    {
+        currentGun = newGun;
+    }
 
-    
+    public void EquipGun()
+    {
+        currentGun = Instantiate(currentGun, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+        
+    }
+
+    public void Respawn()
+    {
+        animator.SetTrigger("respawn");
+    }
 }
