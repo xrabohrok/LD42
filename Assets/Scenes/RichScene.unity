@@ -1284,6 +1284,12 @@ Prefab:
       propertyPath: animator
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114891707185279580, guid: 0b27034d8dc5cbe47a006b4412aad20c,
+        type: 2}
+      propertyPath: currentGun
+      value: 
+      objectReference: {fileID: 1375714088551110, guid: 25ef4cf7b1b23764bbce6897e5edda63,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b27034d8dc5cbe47a006b4412aad20c, type: 2}
   m_IsPrefabAsset: 0
