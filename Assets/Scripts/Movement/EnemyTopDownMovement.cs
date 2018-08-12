@@ -9,9 +9,10 @@ public class EnemyTopDownMovement : TopDownMovement {
 
     private bool enemyCanMove = true;
 
-    public float interactionRange = 1f;
+    public float interactionRange = 0.1f;
     public int hp = 100;
     private bool isDead = false;
+    public int bumpDamage = 10;
     
     
     public GameObject gooPrefab;
