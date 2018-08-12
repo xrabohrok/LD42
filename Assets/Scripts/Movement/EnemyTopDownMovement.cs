@@ -159,7 +159,7 @@ public class EnemyTopDownMovement : TopDownMovement {
             {
                 ratio += 1;
             }
-            
+
             animator.SetFloat("rotation",ratio);
         }
         return unitVelocity;

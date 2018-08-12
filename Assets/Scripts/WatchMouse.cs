@@ -30,6 +30,6 @@ public class WatchMouse : MonoBehaviour
 
 	    anim.SetFloat("rotation", ratio);
 
-        Debug.Log(ratio);
+//        Debug.Log(ratio);
 	}
 }
