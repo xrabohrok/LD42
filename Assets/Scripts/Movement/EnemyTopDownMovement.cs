@@ -11,6 +11,7 @@ public class EnemyTopDownMovement : TopDownMovement {
 
     public float interactionRange = 1f;
     public int hp = 100;
+    private bool isDead = false;
     
     
     public GameObject gooPrefab;
@@ -38,17 +39,23 @@ public class EnemyTopDownMovement : TopDownMovement {
         player = GameObject.FindGameObjectWithTag("Player");
 
         facing = Facing.South;
+        isDead = false;
         base.Start();
     }
 
     // Update is called once per frame
     protected virtual void Update()
     {
-        if(this.hp <= 0)
+        if(this.hp <= 0 && !isDead)
         {
+            rb2D.velocity = Vector2.zero;
             Death();
-            
+           
             return;
+        }
+        else if (isDead)
+        {
+            rb2D.velocity = Vector2.zero;
         }
 
         if (enemyCanMove)
@@ -113,10 +120,18 @@ public class EnemyTopDownMovement : TopDownMovement {
         this.hp -= amount;
     }
 
+    
     public void Death()
     {
+        isDead = true;
         Instantiate(gooPrefab, new Vector3(this.transform.position.x, this.transform.position.y, 0), Quaternion.identity);
         EventManager.TriggerEvent("ENEMY_DIED");
+        animator.SetTrigger("die");   
+       
+    }
+
+    private void CleanUp()
+    {
         Destroy(gameObject);
     }
     
@@ -130,6 +145,23 @@ public class EnemyTopDownMovement : TopDownMovement {
         Vector3 heading = player.transform.position - transform.position;
         Vector3 unitVelocity = heading / heading.magnitude;
 
+        if (rb2D.velocity != Vector2.zero)
+        {
+
+            float directionX = heading.x;
+            float directionY = heading.y;
+
+            float angle = Mathf.Atan2(directionY, directionX);
+            float ratio = ( angle / (Mathf.PI * 2));
+
+            if (ratio < 0)
+            {
+                ratio += 1;
+            }
+            
+            Debug.Log("Ratio set to: " + ratio);
+            animator.SetFloat("rotation",ratio);
+        }
         return unitVelocity;
 
     }
@@ -143,10 +175,7 @@ public class EnemyTopDownMovement : TopDownMovement {
     public void MoveTowardPlayer(Vector3 unitVelocity)
     {
         rb2D.velocity = unitVelocity * speed;
-        if (rb2D.velocity != Vector2.zero)
-        {
-            animator.SetFloat("Speed", 1);
-        }
+       
     }
 }
 
