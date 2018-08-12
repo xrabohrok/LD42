@@ -4,7 +4,7 @@
 # To import these sprites into your Unity project, download "TexturePackerImporter":
 # https://www.codeandweb.com/texturepacker/unity
 #
-# $TexturePacker:SmartUpdate:2cfb39fdbb363012d860012f89639b1c:e61da9e824b8e97ecfb48efde0d5febf:f683c4e9aa78f29e0ed6c6b94537e31d$
+# $TexturePacker:SmartUpdate:f8821c9300370853acc9675d3e524e5c:d22b323331d8fa6aada19f453cf6830f:f683c4e9aa78f29e0ed6c6b94537e31d$
 #
 :format=40300
 :texture=sprites_all.png
@@ -117,6 +117,14 @@ shooter/gun2/side;1691;217;64;64; 0.5;0.5; 0;0;0;0
 shooter/gun2/up;1756;217;64;64; 0.5;0.5; 0;0;0;0
 shooter/gun2/upAngle-right;1821;217;64;64; 0.5;0.5; 0;0;0;0
 shooter/gun2/upAngle;1886;217;64;64; 0.5;0.5; 0;0;0;0
-UI/batteryBar;1951;271;52;10; 0.5;0.5; 0;0;0;0
-UI/batteryFrame;1;198;63;18; 0.5;0.5; 0;0;0;0
-UI/pointsIcon;65;196;18;20; 0.5;0.5; 0;0;0;0
+shooter/gun3/down;1951;217;64;64; 0.5;0.5; 0;0;0;0
+shooter/gun3/downAngle-right;1;152;64;64; 0.5;0.5; 0;0;0;0
+shooter/gun3/downAngle;66;152;64;64; 0.5;0.5; 0;0;0;0
+shooter/gun3/side-right;131;152;64;64; 0.5;0.5; 0;0;0;0
+shooter/gun3/side;196;152;64;64; 0.5;0.5; 0;0;0;0
+shooter/gun3/up;261;152;64;64; 0.5;0.5; 0;0;0;0
+shooter/gun3/upAngle-right;326;152;64;64; 0.5;0.5; 0;0;0;0
+shooter/gun3/upAngle;391;152;64;64; 0.5;0.5; 0;0;0;0
+UI/batteryBar;456;206;52;10; 0.5;0.5; 0;0;0;0
+UI/batteryFrame;509;198;63;18; 0.5;0.5; 0;0;0;0
+UI/pointsIcon;573;196;18;20; 0.5;0.5; 0;0;0;0
