@@ -84,7 +84,7 @@ public class PlayerTopDownMovement : TopDownMovement {
 
     public void HandleShootingInput()
     {
-        currentGun.GetComponent<BaseGunScript>().Shoot();
+        currentGun.GetComponent<BaseGunScript>().TryShoot();
     }
 
     public void HandleCleanerInput()

@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class SniperGunScript : BaseGunScript {
 
-    private void Start()
+    public override void Start()
     {
-        bulletDamage = 30;
+        bulletDamage = 50;
+        cooldownPeriod = 0.5f;
         base.Start();
     }
 
