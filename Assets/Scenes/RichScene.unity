@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 253788827}
   - component: {fileID: 253788829}
   - component: {fileID: 253788828}
+  - component: {fileID: 253788830}
   m_Layer: 8
   m_Name: map-arena
   m_TagString: Background
@@ -376,6 +377,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 2
   m_SpriteSortPoint: 0
+--- !u!50 &253788830
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 253788826}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &340825090
 Prefab:
   m_ObjectHideFlags: 0
@@ -978,7 +999,7 @@ Prefab:
         type: 2}
       propertyPath: currentGun
       value: 
-      objectReference: {fileID: 1937357842243612, guid: 26629bbf8ac5bec44a3ca41a58c617c5,
+      objectReference: {fileID: 1194489091319950, guid: 7f0b132efa3df2944868e72214761fcb,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b27034d8dc5cbe47a006b4412aad20c, type: 2}

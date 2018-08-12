@@ -77,6 +77,7 @@ MonoBehaviour:
   bulletDamage: 0
   bulletSpeed: 0
   cooldownPeriod: 1
+  crosshire: {fileID: 21300240, guid: 494236404efb3584db0629ae916b9969, type: 3}
 --- !u!114 &114835419401824688
 MonoBehaviour:
   m_ObjectHideFlags: 1

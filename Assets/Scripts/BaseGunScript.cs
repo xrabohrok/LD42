@@ -62,15 +62,18 @@ public class BaseGunScript : MonoBehaviour {
 
 	public void SetCursor()
 	{
-		var croppedTexture = new Texture2D( (int)crosshire.rect.width, (int)crosshire.rect.height );
-		var pixels = crosshire.texture.GetPixels(  (int)crosshire.textureRect.x, 
-			(int)crosshire.textureRect.y, 
-			(int)crosshire.textureRect.width, 
-			(int)crosshire.textureRect.height );
-		croppedTexture.SetPixels( pixels );
-		croppedTexture.Apply();
+		if (crosshire != null)
+		{
+			var croppedTexture = new Texture2D((int) crosshire.rect.width, (int) crosshire.rect.height);
+			var pixels = crosshire.texture.GetPixels((int) crosshire.textureRect.x,
+				(int) crosshire.textureRect.y,
+				(int) crosshire.textureRect.width,
+				(int) crosshire.textureRect.height);
+			croppedTexture.SetPixels(pixels);
+			croppedTexture.Apply();
 
-		Cursor.SetCursor(croppedTexture, new Vector2(0.0f, 0.0f), CursorMode.Auto );
+			Cursor.SetCursor(croppedTexture, new Vector2(0.0f, 0.0f), CursorMode.Auto);
+		}
 	}
 
 }

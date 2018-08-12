@@ -77,6 +77,7 @@ MonoBehaviour:
   bulletDamage: 20
   bulletSpeed: 5
   cooldownPeriod: 1
+  crosshire: {fileID: 21300234, guid: 494236404efb3584db0629ae916b9969, type: 3}
   numPellets: 7
 --- !u!114 &114919381409346226
 MonoBehaviour:
