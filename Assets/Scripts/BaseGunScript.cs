@@ -14,6 +14,7 @@ public class BaseGunScript : MonoBehaviour {
 	// Use this for initialization
 	public virtual void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
+		EventManager.StartListening("PLAYER_DIED", Cleanup);
     }
 	
 	// Update is called once per frame
@@ -23,14 +24,18 @@ public class BaseGunScript : MonoBehaviour {
 
     public void TryShoot()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            if ((cooldownTimerStart == 0) || (Time.time > cooldownTimerStart + cooldownPeriod))
-            {
-                Shoot();
-                cooldownTimerStart = Time.time;
-            }
-        }
+
+	    if (player && !player.GetComponent<PlayerStatus>().IsDead)
+	    {
+		    if (Input.GetMouseButtonDown(0))
+		    {
+			    if ((cooldownTimerStart == 0) || (Time.time > cooldownTimerStart + cooldownPeriod))
+			    {
+				    Shoot();
+				    cooldownTimerStart = Time.time;
+			    }
+		    }
+	    }
     }
 
     public virtual void Shoot()
@@ -43,4 +48,9 @@ public class BaseGunScript : MonoBehaviour {
         GameObject shotFired = Instantiate(bulletPrefab, new Vector3(gunPos.x, gunPos.y, 0), Quaternion.identity);
         shotFired.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
     }
+public void Cleanup()
+{
+Destroy(this.gameObject);
+}
+
 }
