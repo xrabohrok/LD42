@@ -39,15 +39,6 @@ public class PlayerTopDownMovement : TopDownMovement {
         base.Start();
     }
 
-//    private void Update()
-//    {
-//        PlayerStatus playerStatus = this.GetComponent<PlayerStatus>();
-//        if (!playerStatus.IsDead)
-//        {
-//           
-//        }
-//    }
-
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
     public override void FixedUpdate()
     {
@@ -65,11 +56,9 @@ public class PlayerTopDownMovement : TopDownMovement {
 
     public void HandleInput()
     {
-        
-            HandleMovementInput();
-            HandleShootingInput();
-            HandleCleanerInput();
-        
+        HandleMovementInput();
+        HandleShootingInput();
+        HandleCleanerInput();
     }
 
     public void HandleMovementInput()

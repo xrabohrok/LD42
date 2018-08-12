@@ -55,14 +55,6 @@ public class PlayerStatus : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-//		if (GameObject.Find("HUDCanvas"))
-//		{
-//			if (GameObject.Find("HUDCanvas").GetComponentInChildren<Slider>())
-//			{
-//				batterySilder = GameObject.Find("HUDCanvas").GetComponentInChildren<Slider>();
-//			}
-//		}
-
 		if (!isDead)
 		{
 			this.GetComponent<PlayerTopDownMovement>().animator.SetBool("dead", false);
@@ -70,7 +62,6 @@ public class PlayerStatus : MonoBehaviour
 			if (inGoo)
 			{
 				curTime = Time.time;
-				//Debug.Log("Player Standing in Goo for " + (curTime - startTime) + " seconds");
 
 				if (curTime - startTime > dmgTick)
 				{
@@ -109,7 +100,6 @@ public class PlayerStatus : MonoBehaviour
 
 	public void Cleanup()
 	{
-		//Destroy(gameObject);
 		SceneManager.LoadScene("ShopScene");
 		Cursor.SetCursor(null, new Vector2(0.0f, 0.0f), CursorMode.Auto);
 	}

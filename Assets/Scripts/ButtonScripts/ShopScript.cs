@@ -75,7 +75,6 @@ public class ShopScript : MonoBehaviour {
 
         SceneManager.LoadScene("RichScene");
         Roomba.GetComponent<PlayerStatus>().ResetPlayer();
-        //Roomba.GetComponent<PlayerStatus>().GrantBonusHealth(bonusHealth);
         Roomba.GetComponent<PlayerStatus>().IsDead = false;
         Roomba.GetComponent<PlayerStatus>().IsEquiped = false;
         Roomba.GetComponent<PlayerTopDownMovement>().SetCurrentGun(currentGun);
