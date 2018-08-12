@@ -26,6 +26,8 @@ public class DialogueEngine : MonoBehaviour
     public Camera profileCamera;
     public Animator anim;
 
+    public bool dontDrawChoices;
+
     private string displayText;
     private string wholeText;
     private float progress;
@@ -93,6 +95,12 @@ public class DialogueEngine : MonoBehaviour
 	            progress = 0;
 	            choicesDrawn = false;
 
+	            if (storyPlayer.currentTags.Contains("end"))
+	            {
+                    anim.SetBool("Text", false);
+                    anim.SetBool("Portrait", false);
+	            }
+
             }
 
 
@@ -103,17 +111,20 @@ public class DialogueEngine : MonoBehaviour
 	                int i = 0;
 	                var basePos = buttonLocation.transform.position;
 
-	                clearChoices();
-	                foreach (var currentChoice in storyPlayer.currentChoices)
-	                {
-	                    var thing = Instantiate(ButtonPrefab, this.gameObject.transform);
-	                    var closureCount = i;
-	                    thing.gameObject.GetComponentInChildren<Text>().text = currentChoice.text;
-	                    thing.gameObject.GetComponent<Button>().onClick.AddListener(delegate {chosenChoiceAction(closureCount);});
-	                    thing.transform.position = new Vector3(basePos.x, basePos.y + i * buttonDisplacement, basePos.z);
-	                    currentChoices.Add(thing.gameObject);
-	                    i++;
-	                }
+                    if(!dontDrawChoices)
+                    {
+                        clearChoices();
+                        foreach (var currentChoice in storyPlayer.currentChoices)
+                        {
+                            var thing = Instantiate(ButtonPrefab, this.gameObject.transform);
+                            var closureCount = i;
+                            thing.gameObject.GetComponentInChildren<Text>().text = currentChoice.text;
+                            thing.gameObject.GetComponent<Button>().onClick.AddListener(delegate {chosenChoiceAction(closureCount);});
+                            thing.transform.position = new Vector3(basePos.x, basePos.y + i * buttonDisplacement, basePos.z);
+                            currentChoices.Add(thing.gameObject);
+                            i++;
+                        }
+                    }
 
 	                choicesDrawn = true;
 	            }
@@ -134,8 +145,11 @@ public class DialogueEngine : MonoBehaviour
 	        var lengthOfDisplayedText = Mathf.CeilToInt( Mathf.Lerp(0, charCount - 1,  Mathf.Clamp(progress / timeToFinish, 0, 1)));
 	        TriggerSpeakerAnimator(lengthOfDisplayedText);
 //            Debug.Log($"charCount : {charCount}, substring : {length}, ticks: {progress}, readyToAdvance: {readyToAdvance}");
-	        displayText = wholeText.Substring(0, lengthOfDisplayedText);
-	        textTarget.text = displayText;
+            if(!String.IsNullOrEmpty(wholeText))
+            {
+                displayText = wholeText.Substring(0, lengthOfDisplayedText);
+                textTarget.text = displayText;
+            }
 
 	        if (progress > timeToFinish)
 	        {
@@ -226,7 +240,7 @@ public class DialogueEngine : MonoBehaviour
         currentChoices = new List<GameObject>();
     }
 
-    void chosenChoiceAction(int choiceNum)
+    public void chosenChoiceAction(int choiceNum)
     {
         Debug.Log("chose choice " + choiceNum);
         storyPlayer.ChooseChoiceIndex(choiceNum);

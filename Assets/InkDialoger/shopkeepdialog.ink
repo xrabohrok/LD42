@@ -15,6 +15,7 @@
 =optimism
 {You know, there may be a way to end this.|As long as there's enemies, you have to fight them.|There's only one place where the slugs never go.|You may be a robot, but even you're making choices here.|You see what I mean, yeah? Go ahead and try to escape!|What, do you think you'll miss me?|Don't worry, you can always start over and meet me again.|Maybe you're having too much fun. Can't blame you!|Get that high score!}
 ->shoptalk
+#end
 ->DONE
 
 ==shoptalk
@@ -31,13 +32,16 @@
 ->shoptalk
 +[Finish]
 {shopkeep.optimism:Just keeping me company? I can't say I mind it!|{shopkeep.truthtime:Do you think that will help?|Some good choices! Try yourself out and beat those slugs!}}
+#end
 ->DONE
 *{shopkeep.optimism}[Quit]
 The only way to change your luck is to make a choice you haven't before! Go outside and have some real fun.
+#end
 ->DONE
 
 
 ==improvement
 ->shoptalk
 
+#end
 ->DONE
