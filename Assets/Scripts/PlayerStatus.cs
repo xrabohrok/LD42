@@ -2,20 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerStatus : MonoBehaviour
 {
 
 	public int startingHP = 100;
 	public int hp = 100;
-	private bool isDead = false;
+	public bool isDead = false;
 
 	public bool IsDead
 	{
 		get { return isDead; }
+		set { isDead = value; }
 	}
 
-    public Vector2 playerStartPos;
+	public bool isEquiped = true;
+
+	public bool IsEquiped
+	{
+		get { return isEquiped; }
+		set { isEquiped = value; }
+	}
+
+	public Vector2 playerStartPos;
 
     //Goo Varaibles
     private float startTime;
@@ -27,33 +37,46 @@ public class PlayerStatus : MonoBehaviour
 	//end Goo
 	
 	//GUI
-	public Slider batterySilder;
+	//public Slider batterySilder;
 	private Color fullBattery =  new Color(0f,1f,0f,1f);
 	private Color highMidBattery =  new Color(1f,1f,0f,1f);
 	private Color midBattery =  new Color(1f,.5f,0f,1f);
 	private Color lowBattery =  new Color(1f,0f,0f,1f);
 
-	public Image damageImage;
+	//public Image damageImage;
 	public float flashSpeed = 5f;
 	public Color flashColor =  new Color(1f,0f,0f,0.1f);
 	public AudioClip deathSound;
 	//end GUI
 
+	private void Awake()
+	{
+		DontDestroyOnLoad(gameObject);
+	}
+
 	// Use this for initialization
 	void Start ()
 	{
-        DontDestroyOnLoad(gameObject);
+       
         playerStartPos = gameObject.transform.position;
         hp = startingHP;
-		batterySilder.GetComponentInChildren<Image>().color = fullBattery;
+		
 	}
 	
 	// Update is called once per frame
 	void Update()
 	{
+//		if (GameObject.Find("HUDCanvas"))
+//		{
+//			if (GameObject.Find("HUDCanvas").GetComponentInChildren<Slider>())
+//			{
+//				batterySilder = GameObject.Find("HUDCanvas").GetComponentInChildren<Slider>();
+//			}
+//		}
 
 		if (!isDead)
 		{
+			this.GetComponent<PlayerTopDownMovement>().animator.SetBool("dead", false);
 			//Player Standing in Goo
 			if (inGoo)
 			{
@@ -78,24 +101,24 @@ public class PlayerStatus : MonoBehaviour
 	{
 		hp -= dmg;
 		Debug.Log("OW! Health is now at: " + hp);
-		batterySilder.value = hp;
+		//batterySilder.value = hp;
 		
-		if (hp >= 75 )
-		{
-			batterySilder.GetComponentInChildren<Image>().color = fullBattery;
-		}
-		else if (hp < 75 && hp >= 50)
-		{
-			batterySilder.GetComponentInChildren<Image>().color = highMidBattery;
-		}
-		else if (hp < 50 && hp >= 25)
-		{
-			batterySilder.GetComponentInChildren<Image>().color = midBattery;
-		}
-		else if (hp < 25)
-		{
-			batterySilder.GetComponentInChildren<Image>().color = lowBattery;
-		}
+//		if (hp >= 75 )
+//		{
+//			batterySilder.GetComponentInChildren<Image>().color = fullBattery;
+//		}
+//		else if (hp < 75 && hp >= 50)
+//		{
+//			batterySilder.GetComponentInChildren<Image>().color = highMidBattery;
+//		}
+//		else if (hp < 50 && hp >= 25)
+//		{
+//			batterySilder.GetComponentInChildren<Image>().color = midBattery;
+//		}
+//		else if (hp < 25)
+//		{
+//			batterySilder.GetComponentInChildren<Image>().color = lowBattery;
+//		}
 		
 		if(hp <= 0)
 		{
@@ -114,6 +137,7 @@ public class PlayerStatus : MonoBehaviour
 	public void Cleanup()
 	{
 		//Destroy(gameObject);
+		SceneManager.LoadScene("ShopScene");
 	}
 	
 	private void ResetTimer()

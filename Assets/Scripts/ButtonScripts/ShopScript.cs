@@ -38,6 +38,8 @@ public class ShopScript : MonoBehaviour {
         btn3.onClick.AddListener(SetGunToSniper);
         btn4.onClick.AddListener(SetGunToGlobe);
 
+        Roomba = GameObject.Find("Roomba");
+
     }
 	
 	// Update is called once per frame
@@ -71,10 +73,14 @@ public class ShopScript : MonoBehaviour {
     public void closeShop()
     {
 
-        Roomba.GetComponent<PlayerStatus>().ResetPlayer();
-        Roomba.GetComponent<PlayerStatus>().GrantBonusHealth(bonusHealth);
-        Roomba.GetComponent<PlayerTopDownMovement>().SetCurrentGun(currentGun);
         SceneManager.LoadScene("RichScene");
+        Roomba.GetComponent<PlayerStatus>().ResetPlayer();
+        //Roomba.GetComponent<PlayerStatus>().GrantBonusHealth(bonusHealth);
+        Roomba.GetComponent<PlayerStatus>().IsDead = false;
+        Roomba.GetComponent<PlayerStatus>().IsEquiped = false;
+        Roomba.GetComponent<PlayerTopDownMovement>().SetCurrentGun(currentGun);
+        Roomba.GetComponent<PlayerTopDownMovement>().Respawn();
+        
     }
 
 }
