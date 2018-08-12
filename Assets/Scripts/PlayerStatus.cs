@@ -150,6 +150,13 @@ public class PlayerStatus : MonoBehaviour
 
 		}
 	}
-	
-	
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.rigidbody.tag == "Enemy")
+        {
+            TakeDamage(collision.gameObject.GetComponent<EnemyTopDownMovement>().bumpDamage);
+        }
+    }
+
 }

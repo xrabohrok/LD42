@@ -56,6 +56,9 @@ MonoBehaviour:
     type: 2}
   bulletDamage: 20
   bulletSpeed: 5
+  cooldownPeriod: 1
+  cooldownTimerStart: 0
+  numPellets: 7
 --- !u!212 &212834458835548570
 SpriteRenderer:
   m_ObjectHideFlags: 1

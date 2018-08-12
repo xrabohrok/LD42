@@ -105,7 +105,7 @@ public class PlayerTopDownMovement : TopDownMovement {
         //if currentGun gun exists
         if (currentGun)
         {
-            currentGun.GetComponent<BaseGunScript>().Shoot();
+            currentGun.GetComponent<BaseGunScript>().TryShoot();
         }
     }
 
