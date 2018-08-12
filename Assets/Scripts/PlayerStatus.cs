@@ -154,8 +154,7 @@ public class PlayerStatus : MonoBehaviour
 
 		}
 	}
-
-<<<<<<< HEAD
+    
     public void GrantBonusHealth(int bonusHealth)
     {
         hp += bonusHealth;
@@ -171,7 +170,6 @@ public class PlayerStatus : MonoBehaviour
 
     }
 	
-=======
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.rigidbody.tag == "Enemy" && !IsDead)
@@ -179,6 +177,5 @@ public class PlayerStatus : MonoBehaviour
             TakeDamage(collision.gameObject.GetComponent<EnemyTopDownMovement>().bumpDamage);
         }
     }
-
->>>>>>> b614861f367920963c9524bae93c7bb2f866188f
+    
 }
