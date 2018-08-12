@@ -46,9 +46,12 @@ public class PlayerTopDownMovement : TopDownMovement {
 
     public void HandleInput()
     {
-        HandleMovementInput();
-        HandleShootingInput();
-        HandleCleanerInput();
+        if (!this.GetComponent<PlayerStatus>().IsDead)
+        {
+            HandleMovementInput();
+            HandleShootingInput();
+            HandleCleanerInput();
+        }
     }
 
     public void HandleMovementInput()
@@ -76,15 +79,34 @@ public class PlayerTopDownMovement : TopDownMovement {
             velocity.Set(speed, velocity.y);
             facing = Facing.East;
         }
-
-        SetTriggers();
-
+        
         rb2D.velocity = velocity;
+
+        HandleMovementAnimations();
+    }
+
+    public void HandleMovementAnimations()
+    {
+        if (!rb2D.velocity.y.Equals(0.0f) || !rb2D.velocity.x.Equals(0.0f))
+        {
+            animator.SetFloat("speed", 1);
+        }
+        else if (rb2D.velocity.y.Equals(0.0f) && rb2D.velocity.x.Equals(0.0f))
+        {
+            animator.SetFloat("speed", 0);
+        }
+        
+        //Call base triggers handler
+        SetTriggers();
     }
 
     public void HandleShootingInput()
     {
-        currentGun.GetComponent<BaseGunScript>().Shoot();
+        //if currentGun gun exists
+        if (currentGun)
+        {
+            currentGun.GetComponent<BaseGunScript>().Shoot();
+        }
     }
 
     public void HandleCleanerInput()

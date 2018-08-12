@@ -9,7 +9,12 @@ public class PlayerStatus : MonoBehaviour
 	public int startingHP = 100;
 	public int hp = 100;
 	private bool isDead = false;
-	
+
+	public bool IsDead
+	{
+		get { return isDead; }
+	}
+
 	//Goo Varaibles
 	private float startTime;
 	private float curTime;
@@ -40,19 +45,27 @@ public class PlayerStatus : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-		//Player Standing in Goo
-		if (inGoo)
-		{
-			curTime = Time.time;
-			//Debug.Log("Player Standing in Goo for " + (curTime - startTime) + " seconds");
+	void Update()
+	{
 
-			if (curTime - startTime > dmgTick)
+		if (!isDead)
+		{
+			//Player Standing in Goo
+			if (inGoo)
 			{
-				TakeDamage(gooDmg);
-				ResetTimer();
+				curTime = Time.time;
+				//Debug.Log("Player Standing in Goo for " + (curTime - startTime) + " seconds");
+
+				if (curTime - startTime > dmgTick)
+				{
+					TakeDamage(gooDmg);
+					ResetTimer();
+				}
 			}
+		}
+		else
+		{
+			
 		}
 
 	}
@@ -90,7 +103,13 @@ public class PlayerStatus : MonoBehaviour
 	{
 		isDead = true;
 		EventManager.TriggerEvent("PLAYER_DIED");
-		Destroy(gameObject);
+		this.GetComponent<PlayerTopDownMovement>().animator.SetBool("dead", true);
+		this.GetComponent<PlayerTopDownMovement>().animator.SetFloat("speed", 0.0f);
+	}
+
+	public void Cleanup()
+	{
+		//Destroy(gameObject);
 	}
 	
 	private void ResetTimer()
