@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Railgun
+  m_Controller: {fileID: 9100000, guid: 12faf3b539ecd434f9b099edea1ff54c, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: ee08b6f2af51dbe4c80529b04c5a9d70, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f3508d8472b55ea42b2ef365f0056247, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3ab792b94e83dae4d96567619f9cc51c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bf2aa6907d188134fabc7d7466c6c85f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3d4d50755bd2fb047a79f7d35786bf9b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6949376473dc21f49bfff596104975a3, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d9582e0d0ed61f14eb796485b4af209a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a7a47e858bfc0c64d983a21b39416f93, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: cf3de62754e9ecf4596cb1d2adea0374, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2a082787832a9814daacd06726522ebb, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a388b8825472dce489c688d3c6f9242b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2f45c956dfe9379469755d116403c965, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 2206053af64a47146af040504835ddd3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5d605a47aa4d59d4b8241adb41c297aa, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c079bc41b5e77304d81b332ed80692f5, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: cd8bc4fa23690104c9b504ea23d84959, type: 2}
