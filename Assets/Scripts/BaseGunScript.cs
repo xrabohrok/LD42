@@ -12,7 +12,7 @@ public class BaseGunScript : MonoBehaviour {
     public float cooldownPeriod = 1f;
     private float cooldownTimerStart = 0;
 
-	public Sprite crosshire;
+	public Sprite crosshair;
 
 	// Use this for initialization
 	public virtual void Start () {
@@ -62,13 +62,13 @@ public class BaseGunScript : MonoBehaviour {
 
 	public void SetCursor()
 	{
-		if (crosshire != null)
+		if (crosshair != null)
 		{
-			var croppedTexture = new Texture2D((int) crosshire.rect.width, (int) crosshire.rect.height);
-			var pixels = crosshire.texture.GetPixels((int) crosshire.textureRect.x,
-				(int) crosshire.textureRect.y,
-				(int) crosshire.textureRect.width,
-				(int) crosshire.textureRect.height);
+			var croppedTexture = new Texture2D((int) crosshair.rect.width, (int) crosshair.rect.height);
+			var pixels = crosshair.texture.GetPixels((int) crosshair.textureRect.x,
+				(int) crosshair.textureRect.y,
+				(int) crosshair.textureRect.width,
+				(int) crosshair.textureRect.height);
 			croppedTexture.SetPixels(pixels);
 			croppedTexture.Apply();
 
