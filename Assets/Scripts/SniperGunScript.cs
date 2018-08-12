@@ -2,12 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SniperGunScript : BaseGunScript {
+public class SniperGunScript : BaseGunScript
+{
+    private LineRenderer laserBeam;
 
     public override void Start()
     {
         bulletDamage = 50;
         cooldownPeriod = 0.5f;
+
+        laserBeam = GetComponent<LineRenderer>();
+        laserBeam.enabled = false;
+        laserBeam.useWorldSpace = true;
+        
         base.Start();
     }
 
@@ -32,8 +39,27 @@ public class SniperGunScript : BaseGunScript {
                 if(hit.collider && hit.collider.tag == "Enemy")
                 {
                     hit.transform.gameObject.GetComponent<EnemyTopDownMovement>().TakeDamage(bulletDamage);
+                    
                 }
+
             }
+            laserBeam.enabled = true;
+            laserBeam.SetPosition(0, gunPos);
+            laserBeam.SetPosition(1,worldPoint);
+            StartCoroutine(Fade());
+
+        }
+        else
+        {
+            laserBeam.enabled = false;
+           
         }
     }
+    
+    IEnumerator Fade() {
+        yield return new WaitForSeconds(.5f);
+        laserBeam.enabled = false;
+    }
+
+    
 }
