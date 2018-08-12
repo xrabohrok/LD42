@@ -10,8 +10,12 @@ public class PlayerStatus : MonoBehaviour
 	public int hp = 100;
 	private bool isDead = false;
 
-    public Vector2 playerStartPos;
+	public bool IsDead
+	{
+		get { return isDead; }
+	}
 
+    public Vector2 playerStartPos;
 
     //Goo Varaibles
     private float startTime;
@@ -45,19 +49,27 @@ public class PlayerStatus : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-		//Player Standing in Goo
-		if (inGoo)
-		{
-			curTime = Time.time;
-			//Debug.Log("Player Standing in Goo for " + (curTime - startTime) + " seconds");
+	void Update()
+	{
 
-			if (curTime - startTime > dmgTick)
+		if (!isDead)
+		{
+			//Player Standing in Goo
+			if (inGoo)
 			{
-				TakeDamage(gooDmg);
-				ResetTimer();
+				curTime = Time.time;
+				//Debug.Log("Player Standing in Goo for " + (curTime - startTime) + " seconds");
+
+				if (curTime - startTime > dmgTick)
+				{
+					TakeDamage(gooDmg);
+					ResetTimer();
+				}
 			}
+		}
+		else
+		{
+			
 		}
 
 	}
@@ -95,7 +107,13 @@ public class PlayerStatus : MonoBehaviour
 	{
 		isDead = true;
 		EventManager.TriggerEvent("PLAYER_DIED");
-		Destroy(gameObject);
+		this.GetComponent<PlayerTopDownMovement>().animator.SetBool("dead", true);
+		this.GetComponent<PlayerTopDownMovement>().animator.SetFloat("speed", 0.0f);
+	}
+
+	public void Cleanup()
+	{
+		//Destroy(gameObject);
 	}
 	
 	private void ResetTimer()
@@ -137,6 +155,7 @@ public class PlayerStatus : MonoBehaviour
 		}
 	}
 
+<<<<<<< HEAD
     public void GrantBonusHealth(int bonusHealth)
     {
         hp += bonusHealth;
@@ -152,4 +171,14 @@ public class PlayerStatus : MonoBehaviour
 
     }
 	
+=======
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.rigidbody.tag == "Enemy" && !IsDead)
+        {
+            TakeDamage(collision.gameObject.GetComponent<EnemyTopDownMovement>().bumpDamage);
+        }
+    }
+
+>>>>>>> b614861f367920963c9524bae93c7bb2f866188f
 }

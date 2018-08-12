@@ -35,14 +35,18 @@ public class EnemySpawner : MonoBehaviour {
 
     public void SpawnNewEnemy()
     {
-	    Vector2 playerPos = player.transform.position;
-	    pos = RandomCircle(center, mapRadius);
-	    while (Vector2.Distance(pos, playerPos) < spawnDistance)
+	    //Check if Player is still alive
+	    if (!player.GetComponent<PlayerStatus>().IsDead)
 	    {
+		    Vector2 playerPos = player.transform.position;
 		    pos = RandomCircle(center, mapRadius);
+		    while (Vector2.Distance(pos, playerPos) < spawnDistance)
+		    {
+			    pos = RandomCircle(center, mapRadius);
+		    }
+
+		    Instantiate(enemyPrefab, pos, Quaternion.identity);
 	    }
-       
-        Instantiate(enemyPrefab, pos, Quaternion.identity);
     }
 	
 	private Vector2 RandomCircle ( Vector2 centerCircle ,   float radius  ){
