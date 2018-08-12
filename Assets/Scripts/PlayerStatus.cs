@@ -9,9 +9,12 @@ public class PlayerStatus : MonoBehaviour
 	public int startingHP = 100;
 	public int hp = 100;
 	private bool isDead = false;
-	
-	//Goo Varaibles
-	private float startTime;
+
+    public Vector2 playerStartPos;
+
+
+    //Goo Varaibles
+    private float startTime;
 	private float curTime;
 	public float dmgTick = 2.0f;
 	private bool inGoo = false;
@@ -35,7 +38,9 @@ public class PlayerStatus : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		hp = startingHP;
+        DontDestroyOnLoad(gameObject);
+        playerStartPos = gameObject.transform.position;
+        hp = startingHP;
 		batterySilder.GetComponentInChildren<Image>().color = fullBattery;
 	}
 	
@@ -131,6 +136,20 @@ public class PlayerStatus : MonoBehaviour
 
 		}
 	}
+
+    public void GrantBonusHealth(int bonusHealth)
+    {
+        hp += bonusHealth;
+    }
 	
+    //Run when leaving the shop and returning to the game
+    public void ResetPlayer()
+    {
+        hp = startingHP;
+        isDead = false;
+        gameObject.transform.position = playerStartPos;
+
+
+    }
 	
 }

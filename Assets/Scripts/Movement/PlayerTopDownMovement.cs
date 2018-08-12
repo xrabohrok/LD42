@@ -98,6 +98,8 @@ public class PlayerTopDownMovement : TopDownMovement {
 
     }
 
-
-    
+    public void SetCurrentGun(GameObject newGun)
+    {
+        currentGun = newGun;
+    }
 }
