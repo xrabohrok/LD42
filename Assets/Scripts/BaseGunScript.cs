@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class BaseGunScript : MonoBehaviour {
@@ -11,11 +12,15 @@ public class BaseGunScript : MonoBehaviour {
     public float cooldownPeriod = 1f;
     private float cooldownTimerStart = 0;
 
+	public Sprite crosshair;
+
 	// Use this for initialization
 	public virtual void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
 		EventManager.StartListening("PLAYER_DIED", Cleanup);
-    }
+
+		SetCursor();
+	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -48,9 +53,27 @@ public class BaseGunScript : MonoBehaviour {
         GameObject shotFired = Instantiate(bulletPrefab, new Vector3(gunPos.x, gunPos.y, 0), Quaternion.identity);
         shotFired.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
     }
-public void Cleanup()
-{
-Destroy(this.gameObject);
-}
+
+	public void Cleanup()
+	{
+		Destroy(this.gameObject);
+	}
+
+
+	public void SetCursor()
+	{
+		if (crosshair != null)
+		{
+			var croppedTexture = new Texture2D((int) crosshair.rect.width, (int) crosshair.rect.height);
+			var pixels = crosshair.texture.GetPixels((int) crosshair.textureRect.x,
+				(int) crosshair.textureRect.y,
+				(int) crosshair.textureRect.width,
+				(int) crosshair.textureRect.height);
+			croppedTexture.SetPixels(pixels);
+			croppedTexture.Apply();
+
+			Cursor.SetCursor(croppedTexture, new Vector2(0.0f, 0.0f), CursorMode.Auto);
+		}
+	}
 
 }

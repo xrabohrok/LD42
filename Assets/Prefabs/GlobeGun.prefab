@@ -21,7 +21,9 @@ GameObject:
   - component: {fileID: 4424922776917448}
   - component: {fileID: 212852690813439828}
   - component: {fileID: 114015941573755490}
-  m_Layer: 0
+  - component: {fileID: 95641125358709476}
+  - component: {fileID: 114336978281328488}
+  m_Layer: 10
   m_Name: GlobeGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,6 +43,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95641125358709476
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1194489091319950}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 12faf3b539ecd434f9b099edea1ff54c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114015941573755490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56,6 +76,19 @@ MonoBehaviour:
     type: 2}
   bulletDamage: 20
   bulletSpeed: 4
+  cooldownPeriod: 1
+  crosshair: {fileID: 21300236, guid: 494236404efb3584db0629ae916b9969, type: 3}
+--- !u!114 &114336978281328488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1194489091319950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c49545d53b57f94dbec2adb794eabf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212852690813439828
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -88,8 +121,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1013997245
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
