@@ -22,6 +22,7 @@ public class ShopScript : MonoBehaviour {
     public Button shotgunButton;
     public Button sniperGunButton;
     public Button globeGunButton;
+    public DialogueEngine engineObject;
 
     // Use this for initialization
     void Start () {
@@ -41,6 +42,8 @@ public class ShopScript : MonoBehaviour {
         Roomba = GameObject.Find("Roomba");
         Roomba.SetActive(false);
 
+//        engineObject = GameObject.FindObjectOfType<DialogueEngine>();
+
     }
 	
 	// Update is called once per frame
@@ -51,18 +54,25 @@ public class ShopScript : MonoBehaviour {
     public void SetGunToDefault()
     {
         currentGun = defaultGun;
+        engineObject.chosenChoiceAction(0);
+
     }
     public void SetGunToShotgun()
     {
         currentGun = shotgunGun;
+        engineObject.chosenChoiceAction(2);
     }
     public void SetGunToSniper()
     {
         currentGun = sniperGun;
+        engineObject.chosenChoiceAction(3);
+
     }
     public void SetGunToGlobe()
     {
         currentGun = globeGun;
+        engineObject.chosenChoiceAction(4);
+
     }
 
     public void openShop()
