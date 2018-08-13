@@ -65,7 +65,7 @@ public class EnemyTopDownMovement : TopDownMovement {
             //Enemy should move
             curTime += Time.deltaTime;
             float playerDist = FindPlayerDistance();
-            if (animator.GetFloat("Speed") < 1)
+            if (animator.GetFloat("speed") < 1)
             {
                 //If enemy is not moving
                 if (playerDist < InteractionRange)
@@ -82,14 +82,14 @@ public class EnemyTopDownMovement : TopDownMovement {
                     MoveTowardPlayer(unitVelocity);
                 }
             }
-            else if (animator.GetFloat("Speed") >= 1)
+            else if (animator.GetFloat("speed") >= 1)
             {
                 //If Enemy is moving
                 if (playerDist < InteractionRange)
                 {
                     //If player is within interaction zone
                     //Set speed to zero, STOP
-                    animator.SetFloat("Speed", 0);
+                    animator.SetFloat("speed", 0);
                     rb2D.velocity = Vector2.zero;
                 }
                 else
