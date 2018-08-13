@@ -33,8 +33,6 @@ public class TopDownMovement : MonoBehaviour {
 
     public virtual void SetTriggers()
     {
-        animator.SetFloat("YSpeed", rb2D.velocity.y);
-        animator.SetFloat("XSpeed", rb2D.velocity.x);
 
         if (rb2D.velocity.x < 0)
         {
