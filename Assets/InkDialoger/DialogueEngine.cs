@@ -26,7 +26,10 @@ public class DialogueEngine : MonoBehaviour
     public Camera profileCamera;
     public Animator anim;
 
+    private AudioSource audioPlayer;
+
     public bool dontDrawChoices;
+    public bool defaultHasPortrait;
 
     private string displayText;
     private string wholeText;
@@ -41,7 +44,7 @@ public class DialogueEngine : MonoBehaviour
 
     private bool advance;
 
-    private string portraitName;
+    private string currentSpeaker;
     private int charsPerTrigger = 10;
     private int lastTriggeredCount = 0;
 
@@ -52,6 +55,7 @@ public class DialogueEngine : MonoBehaviour
 	    {
 	        lookupPeeps[speaker.speakerName] = speaker;
 	    }
+	    lookupPeeps["default"] = defaultSpeaker;
 
         storyPlayer = new Story(stuff.text);
 	    progress = 0f;
@@ -64,7 +68,7 @@ public class DialogueEngine : MonoBehaviour
 	    {
 	        anim = this.GetComponent<Animator>();
 	    }
-	    portraitName = "";
+	    currentSpeaker = "";
 
 	    tmpText = GetComponentInChildren<TextMeshProUGUI>();
 	    defaultSpeaker.speakerFont = tmpText.font;
@@ -73,6 +77,8 @@ public class DialogueEngine : MonoBehaviour
 	    {
             storyPlayer.ChoosePathString(defaultKnot);
 	    }
+
+	    audioPlayer = GetComponent<AudioSource>();
 	}
 
     // Update is called once per frame
@@ -143,7 +149,7 @@ public class DialogueEngine : MonoBehaviour
             var charCount = wholeText.Length;
 	        timeToFinish = secondsPerCharacter * charCount;
 	        var lengthOfDisplayedText = Mathf.CeilToInt( Mathf.Lerp(0, charCount - 1,  Mathf.Clamp(progress / timeToFinish, 0, 1)));
-	        TriggerSpeakerAnimator(lengthOfDisplayedText);
+	        FireTypingTriggers(lengthOfDisplayedText);
             if(!String.IsNullOrEmpty(wholeText))
             {
                 displayText = wholeText.Substring(0, lengthOfDisplayedText);
@@ -161,30 +167,47 @@ public class DialogueEngine : MonoBehaviour
         }
     }
 
-    private void TriggerSpeakerAnimator(int length)
+    private void FireTypingTriggers(int length)
     {
-        if (length % charsPerTrigger == 0 &&
-            portraitName != "" &&
-            lookupPeeps.ContainsKey(portraitName) &&
-            lookupPeeps[portraitName].speakerAnimator != null &&
-            length != lastTriggeredCount)
+        if (defaultHasPortrait && currentSpeaker == "")
         {
-            int triggerIndex = 1;
-            if (lookupPeeps[portraitName].speakingTriggers.Count >= 1)
+            currentSpeaker = "default";
+        }
+
+        int triggerIndex = 1;
+
+            if (length % charsPerTrigger == 0 && length != lastTriggeredCount)
             {
-                triggerIndex = Mathf.CeilToInt(Random.value * lookupPeeps[portraitName].speakingTriggers.Count) -1;
-                Debug.Log(lookupPeeps[portraitName].speakingTriggers[triggerIndex]);
+
+                if(currentSpeaker != "" &&
+                   lookupPeeps.ContainsKey(currentSpeaker) &&
+                   lookupPeeps[currentSpeaker].speakingTriggers.Count >= 1 &&
+                   lookupPeeps[currentSpeaker].speakerAnimator != null)
+                {
+
+                    triggerIndex = Mathf.CeilToInt(Random.value * lookupPeeps[currentSpeaker].speakingTriggers.Count) -1;
+                    Debug.Log(lookupPeeps[currentSpeaker].speakingTriggers[triggerIndex]);
+                    lookupPeeps[currentSpeaker].speakerAnimator.SetTrigger(lookupPeeps[currentSpeaker].speakingTriggers[triggerIndex]);
+
+                }
+
+                if (lookupPeeps.ContainsKey(currentSpeaker) &&
+                    lookupPeeps[currentSpeaker].speakNoise != null
+                    && audioPlayer != null)
+                {
+                    audioPlayer.PlayOneShot(lookupPeeps[currentSpeaker].speakNoise, .4f);
+                }
 
                 lastTriggeredCount = length;
             }
-            lookupPeeps[portraitName].speakerAnimator.SetTrigger(lookupPeeps[portraitName].speakingTriggers[triggerIndex]);
-        }
+        
     }
+
 
     private void SetPortrait()
     {
         var hasPortrait = false;
-        portraitName = "";
+        currentSpeaker = "";
         foreach (var speaker in speakers)
         {
             var speakerTag = speaker.speakerName + ":";
@@ -196,7 +219,7 @@ public class DialogueEngine : MonoBehaviour
                     profileCamera.transform.position = lookupPeeps[speaker.speakerName].camAngle.position;
                     profileCamera.transform.rotation = lookupPeeps[speaker.speakerName].camAngle.rotation;
                 }
-                portraitName = speaker.speakerName;
+                currentSpeaker = speaker.speakerName;
 
                 if (speaker.speakerFont != null)
                 {
@@ -257,4 +280,5 @@ public class speaker
     public List<string> speakingTriggers;
     public TMP_FontAsset speakerFont;
     public bool forceSpeakerViewer;
+    public AudioClip speakNoise;
 }

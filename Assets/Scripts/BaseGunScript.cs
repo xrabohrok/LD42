@@ -46,7 +46,7 @@ public class BaseGunScript : MonoBehaviour {
 				    cooldownTimerStart = Time.time;
 			        if (fireSound != null)
 			        {
-			            Debug.Log("Pew!");
+//			            Debug.Log("Pew!");
 			            audioPlayer.PlayOneShot(fireSound, .75f);
 			        }
                 }

@@ -24,6 +24,9 @@ public class ShopScript : MonoBehaviour {
     public Button globeGunButton;
     public DialogueEngine engineObject;
 
+    private AudioSource audioPlayer;
+    public AudioClip buySound;
+
     // Use this for initialization
     void Start () {
 
@@ -38,6 +41,8 @@ public class ShopScript : MonoBehaviour {
         btn2.onClick.AddListener(SetGunToShotgun);
         btn3.onClick.AddListener(SetGunToSniper);
         btn4.onClick.AddListener(SetGunToGlobe);
+
+        audioPlayer = GetComponent<AudioSource>();
 
         Roomba = GameObject.Find("Roomba");
         Roomba.SetActive(false);
@@ -55,29 +60,42 @@ public class ShopScript : MonoBehaviour {
     {
         currentGun = defaultGun;
         engineObject.chosenChoiceAction(0);
-
+        playBuySound();
     }
+
     public void SetGunToShotgun()
     {
         currentGun = shotgunGun;
         engineObject.chosenChoiceAction(2);
+        playBuySound();
     }
+
     public void SetGunToSniper()
     {
         currentGun = sniperGun;
         engineObject.chosenChoiceAction(3);
+        playBuySound();
 
     }
+
     public void SetGunToGlobe()
     {
         currentGun = globeGun;
         engineObject.chosenChoiceAction(4);
-
+        playBuySound();
     }
 
     public void openShop()
     {
 
+    }
+
+    private void playBuySound()
+    {
+        if (audioPlayer != null && buySound != null)
+        {
+            audioPlayer.PlayOneShot(buySound, .8f);
+        }
     }
 
 
