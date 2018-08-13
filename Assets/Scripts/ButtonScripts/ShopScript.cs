@@ -84,7 +84,7 @@ public class ShopScript : MonoBehaviour {
     public void closeShop()
     {
 
-        SceneManager.LoadScene("RichScene");
+        SceneManager.LoadScene("MainGame");
         Roomba.GetComponent<PlayerStatus>().ResetPlayer();
         Roomba.SetActive(true);
         Roomba.GetComponent<PlayerStatus>().IsDead = false;
