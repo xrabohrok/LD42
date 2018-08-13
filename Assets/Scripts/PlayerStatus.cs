@@ -161,7 +161,7 @@ public class PlayerStatus : MonoBehaviour
 	
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.rigidbody.tag == "Enemy" && !IsDead)
+        if (collision.rigidbody && collision.rigidbody.tag == "Enemy" && !IsDead)
         {
             TakeDamage(collision.gameObject.GetComponent<EnemyTopDownMovement>().bumpDamage);
         }
