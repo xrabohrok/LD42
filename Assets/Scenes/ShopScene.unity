@@ -2410,6 +2410,11 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114203838061884330, guid: 0e05f691f137a3e4fb603e350ec87e59,
+        type: 2}
+      propertyPath: dontDrawChoices
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e05f691f137a3e4fb603e350ec87e59, type: 2}
   m_IsPrefabAsset: 0

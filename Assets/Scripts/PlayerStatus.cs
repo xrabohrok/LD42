@@ -35,8 +35,13 @@ public class PlayerStatus : MonoBehaviour
 	public int gooDmg = 0;
 
 	//end Goo
-	
-	
+
+	public bool InGoo
+	{
+		get { return inGoo; }
+		set { inGoo = value; }
+	}
+
 
 	private void Awake()
 	{
