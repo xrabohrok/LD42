@@ -65,23 +65,23 @@ public class PlayerTopDownMovement : TopDownMovement {
     {
         Vector2 velocity = new Vector2(0, 0);
 
-        if (Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetAxis("Vertical") > 0 && !Input.GetKey(KeyCode.DownArrow))
         {
             velocity.Set(velocity.x, speed);
             facing = Facing.North;
         }
-        if (Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetAxis("Vertical") < 0 && !Input.GetKey(KeyCode.UpArrow))
         {
             velocity.Set(velocity.x, -(speed));
             facing = Facing.South;
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetAxis("Horizontal") < 0 && !Input.GetKey(KeyCode.RightArrow))
         {
             velocity.Set(-(speed), velocity.y);
             facing = Facing.West;
         }
-        if (Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetAxis("Horizontal") > 0 && !Input.GetKey(KeyCode.LeftArrow))
         {
             velocity.Set(speed, velocity.y);
             facing = Facing.East;
