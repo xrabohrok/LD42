@@ -85,7 +85,6 @@ public class PlayerStatus : MonoBehaviour
 	public void TakeDamage(int dmg)
 	{
 		hp -= dmg;
-		Debug.Log("OW! Health is now at: " + hp);
 
 		GameObject.Find("EventSystem").GetComponent<HealthGUIScript>().SilderValue = hp;
 		
@@ -119,7 +118,6 @@ public class PlayerStatus : MonoBehaviour
 	{
 		if (other.tag == "GooPile")
 		{
-			Debug.Log("Player Entered Goo");
 			gooDmg = other.GetComponent<GooScript>().dmg;
 			inGoo = true;
 			ResetTimer();
@@ -130,7 +128,6 @@ public class PlayerStatus : MonoBehaviour
 	{
 		if (other.tag == "GooPile")
 		{
-			Debug.Log("Player Left Goo");
 			inGoo = false;
 			gooDmg = 0;
 			ResetTimer();
@@ -141,7 +138,6 @@ public class PlayerStatus : MonoBehaviour
 	{
 		if (other.tag == "GooPile")
 		{
-			Debug.Log("Player Standing in Goo");
 			gooDmg = other.GetComponent<GooScript>().dmg;
 			inGoo = true;
 
@@ -165,7 +161,7 @@ public class PlayerStatus : MonoBehaviour
 	
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.rigidbody.tag == "Enemy" && !IsDead)
+        if (collision.rigidbody && collision.rigidbody.tag == "Enemy" && !IsDead)
         {
             TakeDamage(collision.gameObject.GetComponent<EnemyTopDownMovement>().bumpDamage);
         }
