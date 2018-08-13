@@ -144,7 +144,6 @@ public class DialogueEngine : MonoBehaviour
 	        timeToFinish = secondsPerCharacter * charCount;
 	        var lengthOfDisplayedText = Mathf.CeilToInt( Mathf.Lerp(0, charCount - 1,  Mathf.Clamp(progress / timeToFinish, 0, 1)));
 	        TriggerSpeakerAnimator(lengthOfDisplayedText);
-//            Debug.Log($"charCount : {charCount}, substring : {length}, ticks: {progress}, readyToAdvance: {readyToAdvance}");
             if(!String.IsNullOrEmpty(wholeText))
             {
                 displayText = wholeText.Substring(0, lengthOfDisplayedText);
