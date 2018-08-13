@@ -39,6 +39,7 @@ public class ShopScript : MonoBehaviour {
         btn4.onClick.AddListener(SetGunToGlobe);
 
         Roomba = GameObject.Find("Roomba");
+        Roomba.SetActive(false);
 
     }
 	
@@ -75,8 +76,10 @@ public class ShopScript : MonoBehaviour {
 
         SceneManager.LoadScene("RichScene");
         Roomba.GetComponent<PlayerStatus>().ResetPlayer();
+        Roomba.SetActive(true);
         Roomba.GetComponent<PlayerStatus>().IsDead = false;
         Roomba.GetComponent<PlayerStatus>().IsEquiped = false;
+        Roomba.GetComponent<PlayerStatus>().InGoo = false;
         Roomba.GetComponent<PlayerTopDownMovement>().SetCurrentGun(currentGun);
         Roomba.GetComponent<PlayerTopDownMovement>().Respawn();
         
