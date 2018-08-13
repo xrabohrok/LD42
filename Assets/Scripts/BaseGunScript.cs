@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class BaseGunScript : MonoBehaviour {
 
     private GameObject player;
@@ -12,6 +13,9 @@ public class BaseGunScript : MonoBehaviour {
     public float cooldownPeriod = 1f;
     private float cooldownTimerStart = 0;
 
+    private AudioSource audioPlayer;
+    public AudioClip fireSound;
+
 	public Sprite crosshair;
 
 	// Use this for initialization
@@ -20,6 +24,8 @@ public class BaseGunScript : MonoBehaviour {
 		EventManager.StartListening("PLAYER_DIED", Cleanup);
 
 		SetCursor();
+
+	    audioPlayer = this.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -38,7 +44,12 @@ public class BaseGunScript : MonoBehaviour {
 			    {
 				    Shoot();
 				    cooldownTimerStart = Time.time;
-			    }
+			        if (fireSound != null)
+			        {
+			            Debug.Log("Pew!");
+			            audioPlayer.PlayOneShot(fireSound, .75f);
+			        }
+                }
 		    }
 	    }
     }
@@ -52,6 +63,8 @@ public class BaseGunScript : MonoBehaviour {
         // Spawn bullet object from player position moving in vector between player and mouse cursor.
         GameObject shotFired = Instantiate(bulletPrefab, new Vector3(gunPos.x, gunPos.y, 0), Quaternion.identity);
         shotFired.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+
+
     }
 
 	public void Cleanup()

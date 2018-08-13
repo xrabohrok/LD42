@@ -522,7 +522,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4014745603297306, guid: 35ac4deebb746624594b7e6ca7a5c0a2, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114265976786735466, guid: 35ac4deebb746624594b7e6ca7a5c0a2,
         type: 2}
@@ -1379,7 +1379,7 @@ MonoBehaviour:
   blockingLayer:
     serializedVersion: 2
     m_Bits: 0
-  speed: 1
+  speed: 2.85
   busyHandlingInput: 0
   facing: 0
   playerState: 0
