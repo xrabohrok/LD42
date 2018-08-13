@@ -1142,7 +1142,8 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 948eacf6962575b4b8eee18888e2287e, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1300520832
@@ -1722,6 +1723,26 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1708885560}
   m_CullTransparentMesh: 0
+--- !u!1 &2055680362 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1355480005604416, guid: 948eacf6962575b4b8eee18888e2287e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1274128355}
+--- !u!58 &2055680364
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2055680362}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.12
 --- !u!1 &2087766757
 GameObject:
   m_ObjectHideFlags: 0
