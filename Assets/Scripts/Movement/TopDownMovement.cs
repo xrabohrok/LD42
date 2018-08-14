@@ -18,7 +18,7 @@ public class TopDownMovement : MonoBehaviour {
 
 
     // Use this for initialization
-    protected virtual void Start()
+    public virtual void Start()
     {
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         bc2D = gameObject.GetComponent<BoxCollider2D>();

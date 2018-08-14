@@ -35,7 +35,7 @@ public class EnemyTopDownMovement : TopDownMovement {
     private float curTime = 0f;
 
     //Start overrides the Start function of TopDownMovement
-    protected override void Start()
+    public override void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
 

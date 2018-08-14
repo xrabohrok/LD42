@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 212474814302941710}
   - component: {fileID: 114516886010527690}
   - component: {fileID: 114891707185279580}
-  - component: {fileID: 61728679311629510}
   - component: {fileID: 50877599035182742}
   - component: {fileID: 95855895746625042}
+  - component: {fileID: 58440987834360074}
   m_Layer: 10
   m_Name: Roomba
   m_TagString: Player
@@ -39,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1743088027906648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -8.15, y: -2.88, z: 0}
+  m_LocalScale: {x: 2.410912, y: 2.410912, z: 2.410912}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -65,8 +65,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61728679311629510
-BoxCollider2D:
+--- !u!58 &58440987834360074
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -77,19 +77,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 0.64, y: 0.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0.06}
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
-  m_EdgeRadius: 0
+  m_Radius: 0.2
 --- !u!95 &95855895746625042
 Animator:
   serializedVersion: 3
@@ -99,7 +89,7 @@ Animator:
   m_GameObject: {fileID: 1743088027906648}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a740fe2c86b40c74f94ec9dca196cb33, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -121,13 +111,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHP: 100
   hp: 100
+  isDead: 0
+  isEquiped: 0
+  playerStartPos: {x: 0, y: 0}
   dmgTick: 2
   gooDmg: 0
-  batterySilder: {fileID: 0}
-  damageImage: {fileID: 0}
-  flashSpeed: 5
-  flashColor: {r: 1, g: 0, b: 0, a: 0.1}
-  deathSound: {fileID: 0}
 --- !u!114 &114891707185279580
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,11 +134,12 @@ MonoBehaviour:
   blockingLayer:
     serializedVersion: 2
     m_Bits: 0
-  speed: 1
+  speed: 2.85
   busyHandlingInput: 0
   facing: 0
   playerState: 0
-  cleaner: {fileID: 1287147783090662, guid: 8fdfb93d520463349a63f57acfe38ac8, type: 2}
+  cleanerPrefab: {fileID: 1865243120810120, guid: 2eddb69e34ad2494ba4471646b1c539c,
+    type: 2}
   holding: {fileID: 0}
   currentGun: {fileID: 1937357842243612, guid: 26629bbf8ac5bec44a3ca41a58c617c5, type: 2}
   gunsInInventory: []

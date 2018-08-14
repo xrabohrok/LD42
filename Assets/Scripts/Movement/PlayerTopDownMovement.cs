@@ -11,7 +11,7 @@ public class PlayerTopDownMovement : TopDownMovement {
     public PlayerState playerState;
 
   
-    public GameObject cleaner;
+    public GameObject cleanerPrefab;
 
     public GameObject holding;
     //public GameObject interactionZone;
@@ -19,7 +19,9 @@ public class PlayerTopDownMovement : TopDownMovement {
 
     public GameObject currentGun;
     public GameObject[] gunsInInventory;
-    
+    private GameObject currentCleaner;
+
+    private bool lockedMovement;
 
     public void Awake()
     {
@@ -31,10 +33,11 @@ public class PlayerTopDownMovement : TopDownMovement {
 
 
     //Start overrides the Start function of TopDownMovement
-    protected override void Start()
+    public override void Start()
     {
         facing = Facing.South;
         EquipGun();
+        EquipCleaner();
 
         base.Start();
     }
@@ -51,7 +54,17 @@ public class PlayerTopDownMovement : TopDownMovement {
                 playerStatus.IsEquiped = true;
             }
             HandleInput();
+
+            if (currentCleaner == null)
+            {
+                EquipCleaner();
+            }
         }
+    }
+
+    private void EquipCleaner()
+    {
+        currentCleaner = Instantiate(cleanerPrefab, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity, gameObject.transform);
     }
 
     public void HandleInput()
@@ -64,27 +77,33 @@ public class PlayerTopDownMovement : TopDownMovement {
     public void HandleMovementInput()
     {
         Vector2 velocity = new Vector2(0, 0);
+        if (!lockedMovement)
+        {
+            if (Input.GetAxis("Vertical") > 0 && !Input.GetKey(KeyCode.DownArrow))
+            {
+                velocity.Set(velocity.x, speed);
+                facing = Facing.North;
+            }
+            if (Input.GetAxis("Vertical") < 0 && !Input.GetKey(KeyCode.UpArrow))
+            {
+                velocity.Set(velocity.x, -(speed));
+                facing = Facing.South;
+            }
 
-        if (Input.GetAxis("Vertical") > 0 && !Input.GetKey(KeyCode.DownArrow))
-        {
-            velocity.Set(velocity.x, speed);
-            facing = Facing.North;
+            if (Input.GetAxis("Horizontal") < 0 && !Input.GetKey(KeyCode.RightArrow))
+            {
+                velocity.Set(-(speed), velocity.y);
+                facing = Facing.West;
+            }
+            if (Input.GetAxis("Horizontal") > 0 && !Input.GetKey(KeyCode.LeftArrow))
+            {
+                velocity.Set(speed, velocity.y);
+                facing = Facing.East;
+            }
         }
-        if (Input.GetAxis("Vertical") < 0 && !Input.GetKey(KeyCode.UpArrow))
+        else
         {
-            velocity.Set(velocity.x, -(speed));
-            facing = Facing.South;
-        }
-
-        if (Input.GetAxis("Horizontal") < 0 && !Input.GetKey(KeyCode.RightArrow))
-        {
-            velocity.Set(-(speed), velocity.y);
-            facing = Facing.West;
-        }
-        if (Input.GetAxis("Horizontal") > 0 && !Input.GetKey(KeyCode.LeftArrow))
-        {
-            velocity.Set(speed, velocity.y);
-            facing = Facing.East;
+            velocity.Set(0,0);
         }
         
         rb2D.velocity = velocity;
@@ -118,13 +137,22 @@ public class PlayerTopDownMovement : TopDownMovement {
 
     public void HandleCleanerInput()
     {
-        if (Input.GetMouseButtonDown(1))
+        var gunPart = currentCleaner.GetComponent<IGun>();
+        if (gunPart != null)
         {
-            Vector2 playerPos = new Vector2(this.transform.position.x, this.transform.position.y);
-            GameObject cleanerArea = Instantiate(cleaner, new Vector3(playerPos.x, playerPos.y, 0), Quaternion.identity);
-
+            if (Input.GetMouseButtonDown(1))
+            {
+                gunPart.Fire();
+                lockedMovement = true;
+                animator.SetBool("dropped", true);
+            }
+            else if( Input.GetMouseButtonUp(1))
+            {
+                gunPart.StoppedFire();
+                lockedMovement = false;
+                animator.SetBool("dropped", false);
+            }
         }
-
     }
 
     public void SetCurrentGun(GameObject newGun)
@@ -135,7 +163,7 @@ public class PlayerTopDownMovement : TopDownMovement {
     public void EquipGun()
     {
         currentGun = Instantiate(currentGun, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
-        
+
     }
 
     public void Respawn()

@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114309180182451780}
   - component: {fileID: 61302656363387690}
   - component: {fileID: 50247354546323356}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: GooPile
   m_TagString: GooPile
   m_Icon: {fileID: 0}
