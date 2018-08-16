@@ -39,7 +39,6 @@ public class EnemyTopDownMovement : TopDownMovement {
     {
         player = GameObject.FindGameObjectWithTag("Player");
 
-        facing = Facing.South;
         isDead = false;
         base.Start();
     }

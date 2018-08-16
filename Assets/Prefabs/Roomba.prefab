@@ -140,8 +140,8 @@ MonoBehaviour:
   playerState: 0
   cleanerPrefab: {fileID: 1865243120810120, guid: 2eddb69e34ad2494ba4471646b1c539c,
     type: 2}
+  gunPrefab: {fileID: 1937357842243612, guid: 26629bbf8ac5bec44a3ca41a58c617c5, type: 2}
   holding: {fileID: 0}
-  currentGun: {fileID: 1937357842243612, guid: 26629bbf8ac5bec44a3ca41a58c617c5, type: 2}
   gunsInInventory: []
 --- !u!212 &212474814302941710
 SpriteRenderer:

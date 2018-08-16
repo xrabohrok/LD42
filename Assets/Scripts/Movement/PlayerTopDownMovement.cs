@@ -12,14 +12,18 @@ public class PlayerTopDownMovement : TopDownMovement {
 
   
     public GameObject cleanerPrefab;
+    public GameObject gunPrefab;
 
     public GameObject holding;
+
+
     //public GameObject interactionZone;
 
 
-    public GameObject currentGun;
     public GameObject[] gunsInInventory;
     private GameObject currentCleaner;
+    private GameObject currentGun;
+
 
     private bool lockedMovement;
 
@@ -35,7 +39,6 @@ public class PlayerTopDownMovement : TopDownMovement {
     //Start overrides the Start function of TopDownMovement
     public override void Start()
     {
-        facing = Facing.South;
         EquipGun();
         EquipCleaner();
 
@@ -43,7 +46,7 @@ public class PlayerTopDownMovement : TopDownMovement {
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
-    public override void FixedUpdate()
+    public void Update()
     {
         PlayerStatus playerStatus = this.GetComponent<PlayerStatus>();
         if (!playerStatus.IsDead)
@@ -65,6 +68,7 @@ public class PlayerTopDownMovement : TopDownMovement {
     private void EquipCleaner()
     {
         currentCleaner = Instantiate(cleanerPrefab, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity, gameObject.transform);
+        currentCleaner.transform.localScale = gameObject.transform.localScale;
     }
 
     public void HandleInput()
@@ -82,23 +86,19 @@ public class PlayerTopDownMovement : TopDownMovement {
             if (Input.GetAxis("Vertical") > 0 && !Input.GetKey(KeyCode.DownArrow))
             {
                 velocity.Set(velocity.x, speed);
-                facing = Facing.North;
             }
             if (Input.GetAxis("Vertical") < 0 && !Input.GetKey(KeyCode.UpArrow))
             {
                 velocity.Set(velocity.x, -(speed));
-                facing = Facing.South;
             }
 
             if (Input.GetAxis("Horizontal") < 0 && !Input.GetKey(KeyCode.RightArrow))
             {
                 velocity.Set(-(speed), velocity.y);
-                facing = Facing.West;
             }
             if (Input.GetAxis("Horizontal") > 0 && !Input.GetKey(KeyCode.LeftArrow))
             {
                 velocity.Set(speed, velocity.y);
-                facing = Facing.East;
             }
         }
         else
@@ -162,8 +162,10 @@ public class PlayerTopDownMovement : TopDownMovement {
 
     public void EquipGun()
     {
-        currentGun = Instantiate(currentGun, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
-
+        if(currentGun == null)
+        {
+            currentGun = Instantiate(gunPrefab, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+        }
     }
 
     public void Respawn()

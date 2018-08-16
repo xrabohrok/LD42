@@ -6,7 +6,7 @@ public class GlobeGunScript : BaseGunScript
 {
 
     // Use this for initialization
-    void Start()
+    public override void Start()
     {
         bulletDamage = 10;
         base.Start();

@@ -11,11 +11,6 @@ public class TopDownMovement : MonoBehaviour {
     public LayerMask blockingLayer;
     public float speed = 1;             //Floating point variable to store the player's movement speed.
 
-    public bool busyHandlingInput = false;
-
-    public enum Facing { North, South, East, West };
-    public Facing facing;
-
 
     // Use this for initialization
     public virtual void Start()
@@ -24,11 +19,6 @@ public class TopDownMovement : MonoBehaviour {
         bc2D = gameObject.GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-
-    //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
-    public virtual void FixedUpdate()
-    {
     }
 
     public virtual void SetTriggers()
