@@ -74,9 +74,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1170382960635136, guid: c116e3ae49b2e6e459802c6efa8624d1,
     type: 2}
-  bulletDamage: 20
+  bulletDamage: 10
   bulletSpeed: 4
   cooldownPeriod: 1
+  fireSound: {fileID: 0}
   crosshair: {fileID: 21300236, guid: 494236404efb3584db0629ae916b9969, type: 3}
 --- !u!114 &114336978281328488
 MonoBehaviour:
@@ -123,7 +124,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1013997245
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

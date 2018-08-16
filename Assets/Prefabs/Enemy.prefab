@@ -115,9 +115,7 @@ MonoBehaviour:
   blockingLayer:
     serializedVersion: 2
     m_Bits: 0
-  speed: 1
-  busyHandlingInput: 0
-  facing: 0
+  speed: 0.38
   player: {fileID: 0}
   interactionRange: 1
   hp: 100

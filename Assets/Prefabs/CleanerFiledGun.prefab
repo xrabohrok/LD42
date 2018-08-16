@@ -54,5 +54,5 @@ MonoBehaviour:
   energyField: {fileID: 1396354799934004, guid: 1b521e6422fc697438e18dad5266ff37,
     type: 2}
   maxScale: 1.04
-  startScale: 0.75
-  growRatePerSecond: 0.41
+  startScale: 0.57
+  growRatePerSecond: 0.5

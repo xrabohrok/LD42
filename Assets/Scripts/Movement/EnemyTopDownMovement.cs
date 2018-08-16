@@ -7,6 +7,9 @@ public class EnemyTopDownMovement : TopDownMovement {
     protected string currentState;  // This is ripped from animator. DO NOT SET IT OTHERWISE
     public GameObject player;
 
+    public delegate void DeathEvent(EnemyTopDownMovement me);
+    private DeathEvent _myNextOfKin;
+
     private bool enemyCanMove = true;
 
     public float interactionRange = 0.1f;
@@ -131,6 +134,17 @@ public class EnemyTopDownMovement : TopDownMovement {
        
     }
 
+    public void registerDeathNotifier(DeathEvent nextOfKin)
+    {
+        if (_myNextOfKin == null)
+        {
+            _myNextOfKin = nextOfKin;
+            return;
+        }
+        //this works with no error if null, hence the code above
+        _myNextOfKin += nextOfKin;
+    }
+
     private void CleanUp()
     {
         Destroy(gameObject);
@@ -138,7 +152,12 @@ public class EnemyTopDownMovement : TopDownMovement {
     
     public void OnDestroy()
     {
-        
+        if (_myNextOfKin == null)
+        {
+            Debug.LogError("Unregistered enemy just died");
+            return;
+        }
+        _myNextOfKin.Invoke(this);
     }
 
     public Vector3 FindPlayer()

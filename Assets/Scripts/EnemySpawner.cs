@@ -9,13 +9,19 @@ public class EnemySpawner : MonoBehaviour {
 
 	public float mapRadius = 3;
 	public int spawnDistance = 3;
+    public int maxEnemies = 5;
+    public float spawnDelay = 4f;
+    public float spawnDelayWiggle = .2f;
+
     private Vector2 center;
-	private Vector2 pos;
+    private Vector2 pos;
 
     private float startTime;
-	
+    private float nextDelayWiggle;
 
-	// Use this for initialization
+    private int tally = 0;
+
+    // Use this for initialization
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
         EventManager.StartListening("ENEMY_DIED", SpawnNewEnemy);
@@ -26,34 +32,40 @@ public class EnemySpawner : MonoBehaviour {
 
     private void Update()
     {
-        if(Time.time > startTime + 4f)
+        if(Time.time > startTime + spawnDelay + nextDelayWiggle)
         {
             SpawnNewEnemy();
             startTime = Time.time;
+            nextDelayWiggle = Random.value * spawnDelayWiggle;
         }
     }
 
     public void SpawnNewEnemy()
     {
 	    //Check if Player is still alive
-	    if (!player.GetComponent<PlayerStatus>().IsDead)
+	    if (!player.GetComponent<PlayerStatus>().IsDead && tally < maxEnemies)
 	    {
 		    Vector2 playerPos = player.transform.position;
-		    pos = RandomCircle(center, mapRadius);
-		    while (Vector2.Distance(pos, playerPos) < spawnDistance)
-		    {
-			    pos = RandomCircle(center, mapRadius);
-		    }
+//	        do
+//	        {
+	            pos = Random.insideUnitCircle * mapRadius + center;
+//	        } while (Vector2.Distance(pos, playerPos) < spawnDistance);
 
-		    Instantiate(enemyPrefab, pos, Quaternion.identity);
+
+            var spawned = Instantiate(enemyPrefab, pos, Quaternion.identity);
+	        var spawnedController = spawned.GetComponent<EnemyTopDownMovement>();
+	        if (spawnedController != null)
+	        {
+	            tally++;
+                spawnedController.registerDeathNotifier(strikeFromLedger);
+	        }
 	    }
     }
+
+    private void strikeFromLedger(EnemyTopDownMovement dead)
+    {
+        tally--;
+    }
 	
-	private Vector2 RandomCircle ( Vector2 centerCircle ,   float radius  ){
-		float ang = Random.value * 360;
-		Vector2 position;
-		position.x = centerCircle.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
-		position.y = centerCircle.y + radius * Mathf.Cos(ang * Mathf.Deg2Rad);
-		return position;
-	}
+
 }

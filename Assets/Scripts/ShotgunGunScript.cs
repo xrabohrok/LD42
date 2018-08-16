@@ -20,6 +20,7 @@ public class ShotgunGunScript : BaseGunScript
 
                 GameObject shotFired = Instantiate(bulletPrefab, new Vector3(gunPos.x, gunPos.y, 0), Quaternion.identity);
                 shotFired.GetComponent<Rigidbody2D>().velocity = direction * (bulletSpeed + Random.Range(-1.0f, 1.0f));
+                shotFired.GetComponent<BulletScript>().bulletDamage = bulletDamage;
             }
         }
         

@@ -38,7 +38,7 @@ public class CleanerScript : MonoBehaviour {
       GameObject nearGoo = FindClosestGoo();
         if (nearGoo != null)
         {
-            nearGoo.GetComponent<GooScript>().TakeDamage(105);
+//            nearGoo.GetComponent<GooScript>().TakeDamage(105);
         }
 
         timeToDie--;

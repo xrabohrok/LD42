@@ -33,7 +33,7 @@ public class BaseGunScript : MonoBehaviour {
 
 	    if (player && !player.GetComponent<PlayerStatus>().IsDead)
 	    {
-		    if (Input.GetMouseButtonDown(0))
+		    if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0))
 		    {
 			    if ((cooldownTimerStart == 0) || (Time.time > cooldownTimerStart + cooldownPeriod))
 			    {
@@ -58,7 +58,7 @@ public class BaseGunScript : MonoBehaviour {
         // Spawn bullet object from player position moving in vector between player and mouse cursor.
         GameObject shotFired = Instantiate(bulletPrefab, new Vector3(gunPos.x, gunPos.y, 0), Quaternion.identity);
         shotFired.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
-
+        shotFired.GetComponent<BulletScript>().bulletDamage = bulletDamage;
 
     }
 

@@ -6,29 +6,10 @@ public class GooScript : MonoBehaviour
 {
 	
 
-	public int hp = 100;
-
 	public int dmg = 10;
-	
-	
-	
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
 
-        if (hp <= 0)
-        {
-            Destroy(gameObject);
-        }
-	}
-
-	public void TakeDamage (int amount)
-    {
-        hp -= amount;
-    }
+    public float dmgOverTime = .4f;
+	
 
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -37,7 +18,25 @@ public class GooScript : MonoBehaviour
             //this thing is likely a ray, give ourselves to it
             other.gameObject.GetComponent<CleanerRay>().doThingToGoo(this.gameObject);
         }
+
+        if (other.gameObject.tag == "Player")
+        {
+            //this thing is likely a ray, give ourselves to it
+            other.gameObject.GetComponent<PlayerStatus>().TakeDamage(dmg);
+        }
+
     }
 
-	
+    public void OnTriggerStay2D(Collider2D other)
+    {
+
+        if (other.gameObject.tag == "Player")
+        {
+            //this thing is likely a ray, give ourselves to it
+            other.gameObject.GetComponent<PlayerStatus>().TakeDamage(dmgOverTime * Time.deltaTime);
+        }
+
+    }
+
+
 }

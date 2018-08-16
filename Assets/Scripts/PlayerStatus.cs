@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class PlayerStatus : MonoBehaviour
 {
 
-	public int startingHP = 100;
-	public int hp = 100;
+	public float startingHP = 100;
+	private float hp = 100;
 	public bool isDead = false;
 
 	public bool IsDead
@@ -82,7 +82,7 @@ public class PlayerStatus : MonoBehaviour
 
 	}
 
-	public void TakeDamage(int dmg)
+	public void TakeDamage(float dmg)
 	{
 		hp -= dmg;
 

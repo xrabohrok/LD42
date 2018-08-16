@@ -18,9 +18,9 @@ public class HealthGUIScript : MonoBehaviour {
 	public AudioClip deathSound;
 	//end GUI
 
-	public int silderValue = 100;
+	public float silderValue = 100;
 
-	public int SilderValue
+	public float SilderValue
 	{
 		get { return silderValue; }
 		set { silderValue = value; }

@@ -19,11 +19,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4450050413792096}
-  - component: {fileID: 114243174373338290}
   - component: {fileID: 212559422485164422}
   - component: {fileID: 95981081442838132}
   - component: {fileID: 114971962086220044}
   - component: {fileID: 82662511271370874}
+  - component: {fileID: 114643207428363302}
   m_Layer: 10
   m_Name: DefaultGun
   m_TagString: Untagged
@@ -157,7 +157,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114243174373338290
+--- !u!114 &114643207428363302
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,14 +165,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1937357842243612}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e38c358823210254eb14bfb5ca0e8bd1, type: 3}
+  m_Script: {fileID: 11500000, guid: eb5fe7013cfd01d4385646d4274dbcd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1170382960635136, guid: c116e3ae49b2e6e459802c6efa8624d1,
     type: 2}
-  bulletDamage: 19
+  bulletDamage: 59
   bulletSpeed: 5
-  cooldownPeriod: 1
+  cooldownPeriod: 0.23
   fireSound: {fileID: 8300000, guid: c17c7a69f7102e348b99a7c6432a6ef7, type: 3}
   crosshair: {fileID: 21300232, guid: 494236404efb3584db0629ae916b9969, type: 3}
 --- !u!114 &114971962086220044
@@ -220,7 +220,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1013997245
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: 21300216, guid: 494236404efb3584db0629ae916b9969, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

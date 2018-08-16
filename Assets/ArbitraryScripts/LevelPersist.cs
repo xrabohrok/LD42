@@ -31,7 +31,7 @@ public class LevelPersist : MonoBehaviour
         foreach (var validSceneName in ValidSceneNames)
         {
             stayAlive |= validSceneName.Equals(next.name);
-            Debug.Log("next:" + next.name + " current: " + current.name);
+//            Debug.Log("next:" + next.name + " current: " + current.name);
         }
 
         if (attachToMainCamera)
