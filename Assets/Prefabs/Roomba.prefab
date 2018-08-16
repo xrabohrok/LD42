@@ -39,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1743088027906648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.15, y: -2.88, z: 0}
-  m_LocalScale: {x: 2.410912, y: 2.410912, z: 2.410912}
+  m_LocalPosition: {x: 16.717236, y: -1.8464112, z: 0}
+  m_LocalScale: {x: 1.26, y: 1.26, z: 1.26}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -135,9 +135,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   speed: 2.85
-  busyHandlingInput: 0
-  facing: 0
-  playerState: 0
   cleanerPrefab: {fileID: 1865243120810120, guid: 2eddb69e34ad2494ba4471646b1c539c,
     type: 2}
   gunPrefab: {fileID: 1937357842243612, guid: 26629bbf8ac5bec44a3ca41a58c617c5, type: 2}

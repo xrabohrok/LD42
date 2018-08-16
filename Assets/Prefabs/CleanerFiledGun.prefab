@@ -53,6 +53,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   energyField: {fileID: 1396354799934004, guid: 1b521e6422fc697438e18dad5266ff37,
     type: 2}
-  maxScale: 3
-  startScale: 0.6
-  growRatePerSecond: 0.4
+  maxScale: 1.04
+  startScale: 0.75
+  growRatePerSecond: 0.41

@@ -7,10 +7,6 @@ public class PlayerTopDownMovement : TopDownMovement {
 
     public static PlayerTopDownMovement instance;
 
-    public enum PlayerState { Walking, Standing, Flinching, Attacking, }
-    public PlayerState playerState;
-
-  
     public GameObject cleanerPrefab;
     public GameObject gunPrefab;
 
@@ -165,6 +161,7 @@ public class PlayerTopDownMovement : TopDownMovement {
         if(currentGun == null)
         {
             currentGun = Instantiate(gunPrefab, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+            currentGun.transform.localScale = this.transform.localScale;
         }
     }
 

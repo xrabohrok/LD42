@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CleanerFieldGun : MonoBehaviour, IGun
 {
@@ -19,16 +17,21 @@ public class CleanerFieldGun : MonoBehaviour, IGun
     public void Fire()
     {
         fieldActive = true;
+        currentFieldInstance.SetActive(true);
+
     }
 
     public void StoppedFire()
     {
         fieldActive = false;
+        currentFieldInstance.SetActive(false);
+        currentFieldInstance.transform.localScale = baseScale;
+        currentScale = startScale;
     }
 
     public void Start()
     {
-        currentFieldInstance = Instantiate(energyField, Vector3.zero, Quaternion.identity, this.transform);
+        currentFieldInstance = Instantiate(energyField, this.transform.position, Quaternion.identity, this.transform);
         currentFieldInstance.transform.localScale = Vector3.one * startScale;
         currentFieldInstance.SetActive(false);
 

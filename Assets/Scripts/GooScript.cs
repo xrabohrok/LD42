@@ -5,7 +5,6 @@ using UnityEngine;
 public class GooScript : MonoBehaviour
 {
 	
-	public GameObject player;
 
 	public int hp = 100;
 
@@ -15,7 +14,6 @@ public class GooScript : MonoBehaviour
 	
 	// Use this for initialization
 	void Start () {
-		player = GameObject.FindGameObjectWithTag("Player");
 	}
 	
 	// Update is called once per frame
@@ -30,6 +28,15 @@ public class GooScript : MonoBehaviour
 	public void TakeDamage (int amount)
     {
         hp -= amount;
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Bullet")
+        {
+            //this thing is likely a ray, give ourselves to it
+            other.gameObject.GetComponent<CleanerRay>().doThingToGoo(this.gameObject);
+        }
     }
 
 	
