@@ -35,7 +35,7 @@ public class PlayerTopDownMovement : TopDownMovement {
     //Start overrides the Start function of TopDownMovement
     public override void Start()
     {
-        EquipGun();
+        InstantiateGun();
         EquipCleaner();
 
         base.Start();
@@ -49,7 +49,7 @@ public class PlayerTopDownMovement : TopDownMovement {
         { 
             if (!playerStatus.IsEquiped)
             {
-                EquipGun();
+                InstantiateGun();
                 playerStatus.IsEquiped = true;
             }
             HandleInput();
@@ -153,14 +153,15 @@ public class PlayerTopDownMovement : TopDownMovement {
 
     public void SetCurrentGun(GameObject newGun)
     {
-        currentGun = newGun;
+        gunPrefab = newGun;
+        InstantiateGun();
     }
 
-    public void EquipGun()
+    private void InstantiateGun()
     {
         if(currentGun == null)
         {
-            currentGun = Instantiate(gunPrefab, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+            currentGun = Instantiate(gunPrefab, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity, transform);
             currentGun.transform.localScale = this.transform.localScale;
         }
     }
