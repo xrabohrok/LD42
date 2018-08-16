@@ -27,11 +27,6 @@ public class BaseGunScript : MonoBehaviour {
 
 	    audioPlayer = this.GetComponent<AudioSource>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        gameObject.transform.position = player.transform.position;
-	}
 
     public void TryShoot()
     {

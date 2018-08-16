@@ -124,7 +124,6 @@ public class PlayerTopDownMovement : TopDownMovement {
 
     public void HandleShootingInput()
     {
-        //if currentGun gun exists
         if (currentGun)
         {
             currentGun.GetComponent<BaseGunScript>().TryShoot();
