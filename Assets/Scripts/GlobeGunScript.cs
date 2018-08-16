@@ -5,13 +5,6 @@ using UnityEngine;
 public class GlobeGunScript : BaseGunScript
 {
 
-    // Use this for initialization
-    public override void Start()
-    {
-        bulletDamage = 10;
-        base.Start();
-    }
-
     public override void Shoot()
     {
         if (Input.GetMouseButtonDown(0))

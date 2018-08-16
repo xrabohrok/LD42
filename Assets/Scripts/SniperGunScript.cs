@@ -8,9 +8,6 @@ public class SniperGunScript : BaseGunScript
 
     public override void Start()
     {
-        bulletDamage = 50;
-        cooldownPeriod = 0.5f;
-
         laserBeam = GetComponent<LineRenderer>();
         laserBeam.enabled = false;
         laserBeam.useWorldSpace = true;

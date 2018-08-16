@@ -6,14 +6,6 @@ public class ShotgunGunScript : BaseGunScript
 {
     public int numPellets;
 
-	// Use this for initialization
-	public override void Start () {
-        cooldownPeriod = 0.7f;
-        bulletDamage = 10;
-        bulletSpeed = 10f;
-        base.Start();
-    }
-
     public override void Shoot()
     {
         if (Input.GetMouseButtonDown(0))
